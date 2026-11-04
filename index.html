@@ -1343,6 +1343,12 @@ function renderTORegional(body){
 function renderTOMutual(body){
   const orgs=['새마을금고','지역농축협','신협','수협회원조합'];
   const orgColors={'새마을금고':'#3B82F6','지역농축협':'#3DAD6E','신협':'#E85D0A','수협회원조합':'#0293D3'};
+  const orgNotes={
+    '새마을금고':'정기공채 계획 기준. 수시·인재풀 추가채용 및 중앙회 별도채용 제외.',
+    '지역농축협':'전국 지역 농·축협 동시채용 계획 기준. <strong>금융직 외 경제사업·기술·유통직 포함</strong>으로 순수 금융직 채용 인원보다 많을 수 있음.',
+    '신협':'공동채용 참여 조합만 집계. 전체 신협 업권 채용 규모 아님.',
+    '수협회원조합':'일괄공채 확인 사례 기준 (일반관리+기술기능 포함). 미집계 연도 다수.'
+  };
   orgs.forEach(org=>{
     const data=TO.mutual.filter(r=>r.org===org);
     if(!data.length)return;
@@ -1350,7 +1356,7 @@ function renderTOMutual(body){
     const years=[...new Set(data.map(r=>r.year))].sort();
     const maxN=Math.max(...data.map(r=>r.n));
     const s=document.createElement('div');s.className='ana-sec';
-    s.innerHTML=`<div class="sec-ttl">${org} (상·하반기 각 공채 계획)</div>`;
+    s.innerHTML=`<div class="sec-ttl">${org}</div>`;
     years.forEach(y=>{
       const sang=data.find(r=>r.year===y&&r.half==='상');
       const ha=data.find(r=>r.year===y&&r.half==='하');
@@ -1364,11 +1370,13 @@ function renderTOMutual(body){
         <span class="rbar-sub" style="font-size:9.5px;width:120px">상${sang?sang.n+'명':'—'} / 하${ha?ha.n+'명':'—'}</span>`;
       s.appendChild(row);
     });
+    if(orgNotes[org]){
+      const note=document.createElement('div');note.className='gg-tip';note.style.marginTop='6px';
+      note.innerHTML=orgNotes[org];
+      s.appendChild(note);
+    }
     body.appendChild(s);
   });
-  const tip=document.createElement('div');tip.className='gg-tip';
-  tip.innerHTML=`<strong>지역 농축협</strong>은 금융업무 외 경제·유통직 포함 가능. <strong>신협</strong>은 공동채용 참여 조합만 집계(업권 전체 아님). 조합별 수시채용·계약직은 미포함.`;
-  body.appendChild(tip);
 }
 
 // ── REGION PAGE ───────────────────────────────────────────
