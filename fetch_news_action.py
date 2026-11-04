@@ -83,18 +83,22 @@ for src in SOURCES:
 # 중복 링크 먼저 제거
 seen, raw = set(), [a for a in raw if not (a["link"] in seen or seen.add(a["link"]))]
 
-# 최근 3일치만 유지 (날짜 미상 포함)
-today = datetime.now(KST).date()
-cutoff = today - timedelta(days=2)
+# 오늘치 우선, 50건 미만이면 어제 기사도 포함
+today     = datetime.now(KST).date()
+yesterday = today - timedelta(days=1)
 
-articles = [
-    a for a in raw
-    if pub_date_kst(a["pub"]) is None or pub_date_kst(a["pub"]) >= cutoff
-]
+today_arts = [a for a in raw if pub_date_kst(a["pub"]) in (today, None)]
+if len(today_arts) < 50:
+    yest_arts = [a for a in raw if pub_date_kst(a["pub"]) == yesterday]
+    articles  = today_arts + yest_arts
+    print(f"오늘 {len(today_arts)}건 < 50, 어제 {len(yest_arts)}건 추가")
+else:
+    articles = today_arts
 
 articles.sort(key=lambda a: a.get("pub", ""), reverse=True)
+articles = articles[:75]  # 최대 75건
 
-print(f"\n수집 합계: {len(raw)}건 → 3일치 필터 후: {len(articles)}건")
+print(f"\n수집 합계: {len(raw)}건 → 필터 후: {len(articles)}건")
 
 result = {
     "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
