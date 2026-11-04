@@ -420,12 +420,11 @@ gMap.selectAll('path')
     e.stopPropagation();
     gMap.selectAll('.prov').classed('selected',false);
     d3.select(this).classed('selected',true);
-    showProvPanel(d.properties.name_eng, d.properties.name);
-  })
-  .on('mouseover', function(e,d){
-    if(!provPinned) showProvPanel(d.properties.name_eng, d.properties.name);
+    const eng=d.properties.name_eng||'';
+    const ko=PROV[eng]?PROV[eng].name:d.properties.name||eng;
+    showProvPanel(eng, ko);
   });
-svg.on('click',()=>{if(!provPinned) closeProvPanel();});
+svg.on('click',()=>closeProvPanel());
 const zB=d3.zoom().scaleExtent([0.6,25]).on('zoom',e=>{gMap.attr('transform',e.transform);gDots.attr('transform',e.transform);});
 svg.call(zB);
 document.getElementById('zi').onclick=()=>svg.transition().duration(250).call(zB.scaleBy,1.6);
@@ -746,50 +745,55 @@ function timeSince(date){
 }
 
 // ── PROVINCE PANEL ────────────────────────────────────────
-let provPinned=false;
 window.closeProvPanel=function(){
-  provPinned=false;
   document.getElementById('prov-panel').classList.remove('show');
   gMap.selectAll('.prov').classed('selected',false);
 };
 
 function showProvPanel(eng, koName){
-  const d=PROV[eng];
-  if(!d)return;
-  provPinned=true;
+  // eng 키가 없으면 name 첫글자 대문자로 fallback 탐색
+  let d=PROV[eng];
+  if(!d){
+    // partial match fallback
+    const found=Object.keys(PROV).find(k=>eng&&(eng.toLowerCase().includes(k.toLowerCase())||k.toLowerCase().includes(eng.toLowerCase())));
+    if(found) d=PROV[found];
+  }
+  if(!d){
+    // 모든 PROV 키 덤프 (디버그)
+    document.getElementById('pp-name').textContent=koName||eng||'알 수 없음';
+    document.getElementById('pp-total').textContent='?';
+    document.getElementById('pp-pop').textContent='?';
+    document.getElementById('pp-den').textContent='?';
+    document.getElementById('pp-banks').innerHTML=`<div style="font-size:10px;color:var(--t3);padding:4px">eng="${eng}"<br>keys: ${Object.keys(PROV).join(', ')}</div>`;
+    document.getElementById('prov-panel').classList.add('show');
+    return;
+  }
 
   document.getElementById('pp-name').textContent=koName||d.name||eng;
   document.getElementById('pp-total').textContent=d.total.toLocaleString();
   document.getElementById('pp-pop').textContent=(d.pop/10000).toFixed(0);
   document.getElementById('pp-den').textContent=d.pop>0?(d.total/(d.pop/100000)).toFixed(1):'—';
 
-  // 은행별 목록 (지점 많은 순, 필터 적용)
   const byBank=d.by_bank;
-  const sorted=Object.entries(byBank)
-    .filter(([b])=>active[b]!==false)
-    .sort((a,b)=>b[1]-a[1]);
-  const totalShown=sorted.reduce((s,[,c])=>s+c,0)||1;
+  const sorted=Object.entries(byBank).sort((a,b)=>b[1]-a[1]);
+  const totalAll=sorted.reduce((s,[,c])=>s+c,0)||1;
   const maxCnt=sorted[0]?sorted[0][1]:1;
 
   const container=document.getElementById('pp-banks');
   container.innerHTML='';
-  if(sorted.length===0){
-    container.innerHTML='<div style="font-size:11px;color:var(--t3);padding:6px 2px">표시 중인 은행 없음</div>';
-  } else {
-    sorted.forEach(([bank,cnt])=>{
-      const pct=(cnt/totalShown*100).toFixed(1);
-      const barW=(cnt/maxCnt*100).toFixed(1);
-      const col=COLORS[bank]||'#888';
-      const row=document.createElement('div');row.className='pp-bank-row';
-      row.innerHTML=`
-        <span class="pp-bank-dot" style="background:${col}"></span>
-        <span class="pp-bank-name" title="${bank}">${bank}</span>
-        <div class="pp-bank-track"><div class="pp-bank-bar" style="width:${barW}%;background:${col}"></div></div>
-        <span class="pp-bank-cnt">${cnt}</span>
-        <span class="pp-bank-pct">${pct}%</span>`;
-      container.appendChild(row);
-    });
-  }
+  sorted.forEach(([bank,cnt])=>{
+    const pct=(cnt/totalAll*100).toFixed(1);
+    const barW=(cnt/maxCnt*100).toFixed(1);
+    const col=COLORS[bank]||'#888';
+    const row=document.createElement('div');row.className='pp-bank-row';
+    row.innerHTML=`
+      <span class="pp-bank-dot" style="background:${col}"></span>
+      <span class="pp-bank-name" title="${bank}">${bank}</span>
+      <div class="pp-bank-track"><div class="pp-bank-bar" style="width:${barW}%;background:${col}"></div></div>
+      <span class="pp-bank-cnt">${cnt}</span>
+      <span class="pp-bank-pct">${pct}%</span>`;
+    container.appendChild(row);
+  });
   document.getElementById('prov-panel').classList.add('show');
 }
 
