@@ -1,7 +1,10 @@
-"""GitHub Actions에서 RSS를 fetch해 news.json으로 저장"""
+"""GitHub Actions에서 RSS를 fetch해 news.json으로 저장 (오늘치 KST 기준)"""
 import json, re, time
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import xml.etree.ElementTree as ET
+from email.utils import parsedate_to_datetime
+
+KST = timezone(timedelta(hours=9))
 
 try:
     import requests
@@ -17,14 +20,21 @@ SOURCES = [
      "url": "https://www.mk.co.kr/rss/40300001/"},
     {"key": "hankyung", "name": "한국경제", "cls": "hankyung",
      "url": "https://www.hankyung.com/feed/economy"},
-    {"key": "sedaily",  "name": "서울경제", "cls": "yna",
-     "url": "https://www.sedaily.com/Flash/RSS"},
 ]
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; news-fetcher/1.0)"}
 
 def strip_tags(text):
     return re.sub(r'<[^>]+>', '', text or '').strip()
+
+def is_today_kst(pub_str):
+    if not pub_str:
+        return True  # 날짜 없으면 포함
+    try:
+        dt = parsedate_to_datetime(pub_str).astimezone(KST)
+        return dt.date() == datetime.now(KST).date()
+    except Exception:
+        return True  # 파싱 실패시 포함
 
 def fetch_one(src):
     try:
@@ -42,7 +52,7 @@ def fetch_one(src):
             link  = strip_tags(t("link")) or strip_tags(t("guid"))
             desc  = strip_tags(t("description"))[:200]
             pub   = t("pubDate").strip()
-            if title:
+            if title and is_today_kst(pub):
                 articles.append({
                     "title": title, "link": link, "desc": desc,
                     "pub": pub, "src": src["key"],

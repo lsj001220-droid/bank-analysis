@@ -191,6 +191,22 @@ html,body{height:100%;font-family:'Noto Sans KR',sans-serif;background:var(--bg)
 .gg-tip{background:var(--s2);border-radius:var(--r);padding:12px 14px;font-size:12px;color:var(--t2);line-height:1.75;}
 .gg-tip strong{color:var(--text);}
 
+/* region (지역별) page */
+.reg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;padding:14px 18px;}
+.reg-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:12px 13px;display:flex;flex-direction:column;gap:9px;}
+.rg-name{font-size:16px;font-weight:700;color:var(--text);}
+.rg-stats{display:flex;gap:0;border:1px solid var(--border);border-radius:7px;overflow:hidden;}
+.rg-stat{flex:1;padding:7px 6px;text-align:center;border-right:1px solid var(--border);}
+.rg-stat:last-child{border-right:none;}
+.rg-stat-n{font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1;}
+.rg-stat-l{font-size:9px;color:var(--t3);margin-top:2px;}
+.rg-donut-row{display:flex;align-items:center;gap:9px;}
+.rg-legend{flex:1;min-width:0;}
+.rg-leg-row{display:flex;align-items:center;gap:4px;font-size:10px;color:var(--t2);margin-bottom:3px;line-height:1.2;}
+.rg-leg-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.rg-leg-name{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.rg-leg-cnt{font-variant-numeric:tabular-nums;color:var(--t3);margin-left:2px;}
+
 /* province info panel */
 #prov-panel{
   position:absolute;top:max(56px,calc(env(safe-area-inset-top,0px)+52px));right:12px;
@@ -269,6 +285,12 @@ html,body{height:100%;font-family:'Noto Sans KR',sans-serif;background:var(--bg)
       <circle cx="12" cy="16" r="1.5"/>
     </svg>
   </button>
+  <button class="nav-btn" id="nb-reg" onclick="showPage('reg')" title="지역별 현황">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+      <circle cx="12" cy="9" r="2.5"/>
+    </svg>
+  </button>
   <button class="nav-btn" style="margin-top:auto" onclick="toggleTheme()" title="테마">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <circle cx="12" cy="12" r="5"/>
@@ -288,14 +310,6 @@ html,body{height:100%;font-family:'Noto Sans KR',sans-serif;background:var(--bg)
       <div id="topbar">
         <div class="pill">전국 은행 지점 <small id="vcnt"></small></div>
         <button class="tbtn" id="stat-btn" onclick="toggleMapPanel()">통계 ▶</button>
-        <button class="tbtn" id="dbg-btn" onclick="
-          var r=document.getElementById('dbg-info');
-          var provs=document.querySelectorAll('.prov');
-          r.textContent='provs:'+provs.length;
-          showProvPanel('Seoul','서울');
-          r.textContent+=' panel:'+document.getElementById('prov-panel').classList.contains('show');
-        " style="background:#e74c3c;color:#fff;border-color:#e74c3c">🔍테스트</button>
-        <div id="dbg-info" style="font-size:10px;color:#e74c3c;white-space:nowrap"></div>
       </div>
       <div id="zoom-ctrl">
         <div class="zbtn" id="zi">+</div>
@@ -419,6 +433,24 @@ html,body{height:100%;font-family:'Noto Sans KR',sans-serif;background:var(--bg)
     </div>
     <div class="ana-body" id="gg-body"></div>
   </div>
+
+  <!-- 지역별 현황 -->
+  <div class="page" id="page-reg">
+    <div class="ana-header">
+      <div>
+        <div class="ana-title">지역별 현황</div>
+        <div class="ana-sub">도·특별시별 지점 밀도 — 인구 10만명당 지점 수</div>
+      </div>
+      <div class="tab-row">
+        <button class="tab-btn active" id="rsort-den" onclick="switchRegSort('den')">10만당↓</button>
+        <button class="tab-btn"        id="rsort-tot" onclick="switchRegSort('tot')">총지점↓</button>
+        <button class="tab-btn"        id="rsort-pop" onclick="switchRegSort('pop')">인구↓</button>
+      </div>
+    </div>
+    <div style="flex:1;overflow-y:auto" id="reg-scroll">
+      <div id="reg-body"></div>
+    </div>
+  </div>
 </div>
 </div>
 
@@ -456,6 +488,7 @@ window.showPage=function(pg){
   if(pg==='fin'&&!finBuilt){finBuilt=true;renderFin();}
   if(pg==='news'&&!newsInited){newsInited=true;initNews();}
   if(pg==='gg'&&!ggBuilt){ggBuilt=true;renderGG();}
+  if(pg==='reg'&&!regBuilt){regBuilt=true;renderReg();}
 };
 
 // ── MAP ───────────────────────────────────────────────────
@@ -704,9 +737,16 @@ const KW_BANKS=[
   {label:"카카오", terms:["카카오뱅크","카카오"]},
 ];
 const KW_TOPICS=[
-  {label:"AI",  terms:["AI","인공지능","ChatGPT","생성형AI","LLM","AI뱅킹"]},
-  {label:"AML", terms:["AML","자금세탁","자금세탁방지","FDS"]},
-  {label:"DX",  terms:["DX","디지털전환","디지털혁신","디지털금융"]},
+  {label:"AI",    terms:["AI","인공지능","ChatGPT","생성형AI","LLM","AI뱅킹"]},
+  {label:"채용",   terms:["채용","공채","하반기채용","신입행원","금융권채용","은행원채용"]},
+  {label:"금리",   terms:["금리","기준금리","금리인상","금리인하","한국은행","기준금리인하","기준금리인상"]},
+  {label:"대출",   terms:["주담대","가계대출","DSR","LTV","대출규제","부동산대출","가계부채"]},
+  {label:"실적",   terms:["순이익","영업이익","당기순이익","실적","역대","분기"]},
+  {label:"핀테크", terms:["핀테크","카카오뱅크","토스","케이뱅크","인터넷은행","마이데이터","오픈뱅킹"]},
+  {label:"ESG",   terms:["ESG","지속가능","탄소중립","사회공헌","녹색금융"]},
+  {label:"AML",   terms:["AML","자금세탁","자금세탁방지","FDS","내부통제"]},
+  {label:"DX",    terms:["DX","디지털전환","디지털혁신","디지털금융"]},
+  {label:"부동산", terms:["부동산","아파트","주택담보","청약","분양","PF"]},
 ];
 
 const activeKw=new Set();
@@ -802,7 +842,7 @@ window.fetchNews=async function(){
   try{
     const res=await fetch('./news.json',{signal:AbortSignal.timeout(10000),cache:'no-cache'});
     const data=await res.json();
-    allArticles=(data.articles||[]).map(a=>({...a,pub:new Date(a.pub||0)}));
+    allArticles=(data.articles||[]).map(a=>{return{...a,pub:new Date(a.pub||0)};} );
     const now=new Date();
     statusMsg=`갱신: ${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')} · ${allArticles.length}건`;
     if(data.updated) statusMsg+=` (수집: ${data.updated.slice(0,16).replace('T',' ')})`;
@@ -1049,6 +1089,91 @@ function renderFin(){
 
 // fin 페이지 초기화
 document.getElementById('page-fin').addEventListener('show',()=>{if(!finBuilt){finBuilt=true;renderFin();}});
+
+// ── REGION PAGE ───────────────────────────────────────────
+let regBuilt=false, regSort='den';
+window.switchRegSort=function(s){
+  regSort=s;
+  document.querySelectorAll('[id^="rsort-"]').forEach(b=>b.classList.remove('active'));
+  document.getElementById('rsort-'+s).classList.add('active');
+  renderReg();
+};
+
+function shortProvName(nm){
+  return nm.replace('특별시','').replace('광역시','').replace('특별자치도','').replace('특별자치시','').replace('도','');
+}
+
+function bankShortLabel(nm){
+  return nm.replace('은행','').replace('(구 대구은행)','').replace('NH','').replace('KB','')
+           .replace('BNK','').replace('Sh','').replace('IBK','').replace('SC제일','SC');
+}
+
+function renderReg(){
+  const body=document.getElementById('reg-body');
+  if(!body)return;
+  body.innerHTML='';
+
+  const entries=Object.entries(PROV).map(([key,d])=>{
+    const byBank=Object.entries(d.by_bank||{}).sort((a,b)=>b[1]-a[1]);
+    return{key,name:d.name,total:d.total,pop:d.pop,byBank,
+      den:d.pop>0?d.total/(d.pop/100000):0};
+  });
+
+  if(regSort==='den') entries.sort((a,b)=>b.den-a.den);
+  else if(regSort==='tot') entries.sort((a,b)=>b.total-a.total);
+  else entries.sort((a,b)=>b.pop-a.pop);
+
+  // 밀도 색 구간 계산 (상위 1/3 초록, 중간 1/3 주황, 하위 1/3 빨강)
+  const dens=entries.map(e=>e.den).sort((a,b)=>a-b);
+  const q1=dens[Math.floor(dens.length/3)];
+  const q2=dens[Math.floor(dens.length*2/3)];
+  function denColor(v){return v>=q2?'var(--green)':v>=q1?'var(--amber)':'var(--red)';}
+
+  const grid=document.createElement('div');grid.className='reg-grid';
+
+  entries.forEach(e=>{
+    const col=denColor(e.den);
+    const card=document.createElement('div');card.className='reg-card';
+    const svgId='rdnt_'+e.key.replace(/[^a-zA-Z0-9]/g,'_');
+    const topBanks=e.byBank.slice(0,4);
+    const legendHtml=topBanks.map(([b,c])=>{
+      const bc=COLORS[b]||'#888';
+      return`<div class="rg-leg-row"><span class="rg-leg-dot" style="background:${bc}"></span><span class="rg-leg-name">${bankShortLabel(b)}</span><span class="rg-leg-cnt">${c}</span></div>`;
+    }).join('');
+
+    card.innerHTML=`
+      <div class="rg-name">${shortProvName(e.name)}</div>
+      <div class="rg-stats">
+        <div class="rg-stat"><div class="rg-stat-n">${e.total.toLocaleString()}</div><div class="rg-stat-l">지점</div></div>
+        <div class="rg-stat"><div class="rg-stat-n">${(e.pop/10000).toFixed(0)}</div><div class="rg-stat-l">만명</div></div>
+        <div class="rg-stat"><div class="rg-stat-n" style="color:${col}">${e.den.toFixed(1)}</div><div class="rg-stat-l">10만당</div></div>
+      </div>
+      <div class="rg-donut-row">
+        <svg id="${svgId}" width="52" height="52" style="flex-shrink:0"></svg>
+        <div class="rg-legend">${legendHtml}</div>
+      </div>`;
+
+    grid.appendChild(card);
+
+    // 도넛 비동기 렌더
+    requestAnimationFrame(()=>{
+      const svgEl=d3.select('#'+svgId);
+      if(svgEl.empty()||!e.byBank.length)return;
+      const W=52,R=22,ri=11;
+      const gc=svgEl.append('g').attr('transform',`translate(${W/2},${W/2})`);
+      const pie=d3.pie().value(x=>x[1]).sort(null);
+      const arc=d3.arc().outerRadius(R).innerRadius(ri);
+      pie(e.byBank.slice(0,8)).forEach((p,i)=>{
+        gc.append('path').attr('d',arc(p)).attr('fill',COLORS[e.byBank[i][0]]||'#888');
+      });
+      gc.append('text').attr('text-anchor','middle').attr('dy','0.35em')
+        .attr('font-size','9.5').attr('font-weight','700').attr('fill','var(--text)')
+        .text(e.den.toFixed(0));
+    });
+  });
+
+  body.appendChild(grid);
+}
 
 // ── GG (도금고) PAGE ──────────────────────────────────────
 let ggBuilt=false, ggTab='bank';
