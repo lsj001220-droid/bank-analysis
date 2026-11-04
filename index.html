@@ -288,6 +288,14 @@ html,body{height:100%;font-family:'Noto Sans KR',sans-serif;background:var(--bg)
       <div id="topbar">
         <div class="pill">전국 은행 지점 <small id="vcnt"></small></div>
         <button class="tbtn" id="stat-btn" onclick="toggleMapPanel()">통계 ▶</button>
+        <button class="tbtn" id="dbg-btn" onclick="
+          var r=document.getElementById('dbg-info');
+          var provs=document.querySelectorAll('.prov');
+          r.textContent='provs:'+provs.length;
+          showProvPanel('Seoul','서울');
+          r.textContent+=' panel:'+document.getElementById('prov-panel').classList.contains('show');
+        " style="background:#e74c3c;color:#fff;border-color:#e74c3c">🔍테스트</button>
+        <div id="dbg-info" style="font-size:10px;color:#e74c3c;white-space:nowrap"></div>
       </div>
       <div id="zoom-ctrl">
         <div class="zbtn" id="zi">+</div>
@@ -787,28 +795,22 @@ function initNews(){
   },1000);
 }
 
-async function fetchOneRSS(key){
-  const src=RSS_SOURCES[key];
-  const res=await fetch(RSS2JSON+encodeURIComponent(src.url),{signal:AbortSignal.timeout(14000)});
-  const json=await res.json();
-  if(json.status!=='ok'||!json.items) return [];
-  return json.items.map(it=>{
-    const title=(it.title||'').replace(/<[^>]+>/g,'').trim();
-    const link=it.link||'#';
-    const desc=(it.description||'').replace(/<[^>]+>/g,'').replace(/<!\[CDATA\[|\]\]>/g,'').trim().slice(0,200);
-    const pub=new Date(it.pubDate||0);
-    return {title,link,desc,pub,src:key,srcName:src.name,cls:src.cls};
-  }).filter(a=>a.title);
-}
-
 window.fetchNews=async function(){
   document.getElementById('news-status').textContent='가져오는 중...';
   newsCountdown=newsRefreshSec;
-  const res=await Promise.allSettled(Object.keys(RSS_SOURCES).map(fetchOneRSS));
-  allArticles=res.flatMap(r=>r.status==='fulfilled'?r.value:[]).sort((a,b)=>b.pub-a.pub);
-  const now=new Date();
-  document.getElementById('news-status').textContent=
-    `갱신: ${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')} · ${allArticles.length}건`;
+  let statusMsg='';
+  try{
+    const res=await fetch('./news.json',{signal:AbortSignal.timeout(10000),cache:'no-cache'});
+    const data=await res.json();
+    allArticles=(data.articles||[]).map(a=>({...a,pub:new Date(a.pub||0)}));
+    const now=new Date();
+    statusMsg=`갱신: ${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')} · ${allArticles.length}건`;
+    if(data.updated) statusMsg+=` (수집: ${data.updated.slice(0,16).replace('T',' ')})`;
+  }catch(e){
+    allArticles=[];
+    statusMsg='뉴스 파일 없음 — 잠시 후 GitHub Actions가 수집합니다';
+  }
+  document.getElementById('news-status').textContent=statusMsg;
   renderTiles(); renderFeed();
 };
 
