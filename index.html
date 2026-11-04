@@ -141,6 +141,42 @@ html,body{height:100%;font-family:'Noto Sans KR',sans-serif;background:var(--bg)
 .cell-best{outline:2px solid var(--green);outline-offset:-2px;font-weight:700;border-radius:3px;}
 .cell-zero{color:var(--t3);}
 
+/* news */
+.src-toggle{display:flex;align-items:center;gap:4px;font-size:11px;font-weight:500;padding:4px 9px;border-radius:12px;border:1px solid var(--border);background:var(--s2);cursor:pointer;user-select:none;color:var(--t2);}
+.src-toggle input{display:none;}
+.src-toggle.on{background:var(--accent);border-color:var(--accent);color:#fff;}
+.kw-chip{font-family:'Noto Sans KR',sans-serif;font-size:11px;font-weight:600;padding:3px 10px;border-radius:12px;border:1px solid var(--border);background:var(--surface);color:var(--t2);cursor:pointer;white-space:nowrap;transition:background .1s,color .1s;}
+.kw-chip.bank{border-color:#3B82F644;}
+.kw-chip.topic{border-color:#8B5CF644;}
+.kw-chip.bank.on{background:#3B82F6;border-color:#3B82F6;color:#fff;}
+.kw-chip.topic.on{background:#8B5CF6;border-color:#8B5CF6;color:#fff;}
+/* keyword tiles */
+.kw-tile{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);width:200px;flex-shrink:0;overflow:hidden;display:inline-flex;flex-direction:column;vertical-align:top;}
+.kw-tile-hdr{padding:8px 11px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:6px;border-bottom:1px solid var(--border);}
+.kw-tile-hdr .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.kw-tile-art{padding:7px 10px;border-bottom:1px solid var(--border);text-decoration:none;display:block;}
+.kw-tile-art:last-child{border-bottom:none;}
+.kw-tile-art:hover{background:var(--s2);}
+.kta-title{font-size:11.5px;font-weight:500;color:var(--text);line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:3px;}
+.kta-meta{font-size:10px;color:var(--t3);display:flex;gap:5px;}
+.kta-no{font-size:11px;color:var(--t3);padding:8px 10px;font-style:italic;}
+/* feed */
+.news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:9px;}
+.news-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:12px 13px;display:flex;flex-direction:column;gap:5px;text-decoration:none;color:inherit;transition:box-shadow .15s,transform .1s;}
+.news-card:hover{box-shadow:var(--shadow);transform:translateY(-1px);}
+.nc-src{font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:8px;display:inline-block;margin-bottom:1px;}
+.nc-src.yna{background:#e8f0fe;color:#1a56db;}
+.nc-src.mk{background:#fef3c7;color:#92400e;}
+.nc-src.hankyung{background:#ecfdf5;color:#065f46;}
+.nc-title{font-size:13px;font-weight:600;line-height:1.5;color:var(--text);}
+.nc-desc{font-size:11.5px;color:var(--t2);line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.nc-time{font-size:10px;color:var(--t3);margin-top:auto;padding-top:3px;}
+.nc-kw{background:var(--accent);color:#fff;padding:0 3px;border-radius:3px;}
+.news-empty{text-align:center;padding:40px 20px;color:var(--t3);font-size:13px;}
+.news-refresh-bar{position:sticky;top:0;background:var(--surface);border-bottom:1px solid var(--border);padding:5px 16px;font-size:11px;color:var(--t3);display:flex;align-items:center;gap:8px;z-index:5;margin:-12px -16px 12px;}
+.refresh-progress{flex:1;height:3px;background:var(--s3);border-radius:2px;overflow:hidden;}
+.refresh-bar-fill{height:100%;background:var(--accent);border-radius:2px;transition:width 60s linear;}
+
 /* province info panel */
 #prov-panel{
   position:absolute;top:max(56px,calc(env(safe-area-inset-top,0px)+52px));right:12px;
@@ -198,6 +234,12 @@ html,body{height:100%;font-family:'Noto Sans KR',sans-serif;background:var(--bg)
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
       <line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
+    </svg>
+  </button>
+  <button class="nav-btn" id="nb-news" onclick="showPage('news')" title="뉴스피드">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/>
+      <line x1="12" y1="7" x2="18" y2="7"/><line x1="12" y1="11" x2="18" y2="11"/><line x1="12" y1="15" x2="18" y2="15"/>
     </svg>
   </button>
   <button class="nav-btn" id="nb-fin" onclick="showPage('fin')" title="재무비교">
@@ -266,6 +308,39 @@ html,body{height:100%;font-family:'Noto Sans KR',sans-serif;background:var(--bg)
     </div>
   </div>
 
+  <!-- 뉴스피드 -->
+  <div class="page" id="page-news">
+    <div class="ana-header" style="gap:8px;flex-wrap:wrap;padding-bottom:10px">
+      <div style="flex:1;min-width:0">
+        <div class="ana-title">금융·은행 뉴스</div>
+        <div class="ana-sub" id="news-status">로딩 중...</div>
+      </div>
+      <div style="display:flex;gap:5px;align-items:center">
+        <label class="src-toggle" data-src="yna"><input type="checkbox" checked>연합</label>
+        <label class="src-toggle" data-src="mk"><input type="checkbox" checked>매경</label>
+        <label class="src-toggle" data-src="hankyung"><input type="checkbox" checked>한경</label>
+        <button onclick="fetchNews()" class="tbtn" style="margin-left:4px">↺ 갱신</button>
+      </div>
+      <!-- 은행 키워드 -->
+      <div style="width:100%;display:flex;flex-direction:column;gap:5px">
+        <div style="display:flex;align-items:center;gap:5px;flex-wrap:wrap">
+          <span style="font-size:9.5px;font-weight:700;letter-spacing:.06em;color:var(--t3);text-transform:uppercase;white-space:nowrap">은행</span>
+          <div style="display:flex;gap:4px;flex-wrap:wrap" id="kw-bank-row"></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:5px;flex-wrap:wrap">
+          <span style="font-size:9.5px;font-weight:700;letter-spacing:.06em;color:var(--t3);text-transform:uppercase;white-space:nowrap">주제</span>
+          <div style="display:flex;gap:4px;flex-wrap:wrap" id="kw-topic-row"></div>
+        </div>
+      </div>
+    </div>
+    <!-- 키워드 타일 (상단 고정) -->
+    <div id="kw-tiles-wrap" style="display:none;border-bottom:1px solid var(--border);background:var(--s2);padding:10px 14px;overflow-x:auto;white-space:nowrap">
+      <div id="kw-tiles-row" style="display:inline-flex;gap:8px;white-space:normal;vertical-align:top"></div>
+    </div>
+    <!-- 전체 피드 -->
+    <div class="ana-body" id="news-body" style="padding:12px 16px;min-height:0"></div>
+  </div>
+
   <!-- 재무비교 -->
   <div class="page" id="page-fin">
     <div class="ana-header">
@@ -331,6 +406,7 @@ window.showPage=function(pg){
   if(pg==='map') setTimeout(fit,50);
   if(pg==='ana'&&!anaBuilt) buildAna();
   if(pg==='fin'&&!finBuilt){finBuilt=true;renderFin();}
+  if(pg==='news'&&!newsInited){newsInited=true;initNews();}
 };
 
 // ── MAP ───────────────────────────────────────────────────
@@ -497,6 +573,177 @@ function renderAna(){
 }
 
 requestAnimationFrame(fit);
+
+// ── NEWS PAGE ─────────────────────────────────────────────
+let newsInited=false, newsTimer=null, newsRefreshSec=600, newsCountdown=600;
+
+const RSS_SOURCES={
+  yna:     {name:"연합뉴스", url:"https://www.yna.co.kr/RSS/economy.xml",  cls:"yna"},
+  mk:      {name:"매일경제", url:"https://www.mk.co.kr/rss/40300001/",      cls:"mk"},
+  hankyung:{name:"한국경제", url:"https://www.hankyung.com/feed/economy",   cls:"hankyung"},
+};
+const PROXY="https://api.allorigins.win/get?url=";
+const activeSrc={};
+Object.keys(RSS_SOURCES).forEach(k=>activeSrc[k]=true);
+
+// 키워드 정의 ─ {label, terms[], type}
+const KW_BANKS=[
+  {label:"국민",   terms:["국민","KB"]},
+  {label:"우리",   terms:["우리은행","우리"]},
+  {label:"신한",   terms:["신한"]},
+  {label:"하나",   terms:["하나은행","하나"]},
+  {label:"iM",    terms:["iM뱅크","아이엠","대구은행"]},
+  {label:"농협",   terms:["농협","NH농협"]},
+  {label:"부산",   terms:["부산은행","BNK부산"]},
+  {label:"경남",   terms:["경남은행","BNK경남"]},
+  {label:"전북",   terms:["전북은행"]},
+  {label:"광주",   terms:["광주은행"]},
+  {label:"제주",   terms:["제주은행"]},
+  {label:"카카오", terms:["카카오뱅크","카카오"]},
+];
+const KW_TOPICS=[
+  {label:"AI",  terms:["AI","인공지능","ChatGPT","생성형AI","LLM","AI뱅킹"]},
+  {label:"AML", terms:["AML","자금세탁","자금세탁방지","FDS"]},
+  {label:"DX",  terms:["DX","디지털전환","디지털혁신","디지털금융"]},
+];
+
+const activeKw=new Set();
+let allArticles=[];
+
+function matchesKw(a, kw){
+  const text=(a.title+' '+a.desc);
+  return kw.terms.some(t=>text.toLowerCase().includes(t.toLowerCase()));
+}
+
+// 소스 토글
+document.querySelectorAll('.src-toggle').forEach(el=>{
+  el.classList.add('on');
+  el.addEventListener('click',()=>{
+    const k=el.dataset.src; activeSrc[k]=!activeSrc[k];
+    el.classList.toggle('on',activeSrc[k]); renderFeed(); renderTiles();
+  });
+});
+
+function buildKwChips(){
+  function makeChip(kw,type){
+    const btn=document.createElement('button');
+    btn.className=`kw-chip ${type}`;btn.textContent=kw.label;btn.dataset.label=kw.label;
+    btn.addEventListener('click',()=>{
+      if(activeKw.has(kw.label)){activeKw.delete(kw.label);btn.classList.remove('on');}
+      else{activeKw.add(kw.label);btn.classList.add('on');}
+      renderTiles(); renderFeed();
+    });
+    return btn;
+  }
+  const bankRow=document.getElementById('kw-bank-row');
+  const topicRow=document.getElementById('kw-topic-row');
+  if(bankRow)  KW_BANKS.forEach(kw=>bankRow.appendChild(makeChip(kw,'bank')));
+  if(topicRow) KW_TOPICS.forEach(kw=>topicRow.appendChild(makeChip(kw,'topic')));
+}
+
+function renderTiles(){
+  const wrap=document.getElementById('kw-tiles-wrap');
+  const row=document.getElementById('kw-tiles-row');
+  if(!wrap||!row)return;
+  if(activeKw.size===0){wrap.style.display='none';return;}
+  wrap.style.display='block';
+  const allKw=[...KW_BANKS,...KW_TOPICS];
+  row.innerHTML='';
+  allKw.filter(kw=>activeKw.has(kw.label)).forEach(kw=>{
+    const isBank=KW_BANKS.includes(kw);
+    const color=isBank?'#3B82F6':'#8B5CF6';
+    const arts=allArticles.filter(a=>activeSrc[a.src]&&matchesKw(a,kw)).slice(0,3);
+    const tile=document.createElement('div');tile.className='kw-tile';
+    tile.innerHTML=`<div class="kw-tile-hdr">
+      <span class="dot" style="background:${color}"></span>
+      <span style="color:${color}">${kw.label}</span>
+      <span style="font-size:9px;font-weight:400;color:var(--t3);margin-left:auto">${arts.length}건</span>
+    </div>`;
+    if(arts.length===0){
+      const no=document.createElement('div');no.className='kta-no';no.textContent='관련 기사 없음';
+      tile.appendChild(no);
+    }
+    arts.forEach(a=>{
+      const el=document.createElement('a');el.className='kw-tile-art';
+      el.href=a.link;el.target='_blank';el.rel='noopener';
+      el.innerHTML=`<div class="kta-title">${a.title}</div>
+        <div class="kta-meta"><span class="nc-src ${a.cls}" style="font-size:8.5px;padding:1px 5px">${a.srcName}</span><span>${timeSince(a.pub)}</span></div>`;
+      tile.appendChild(el);
+    });
+    row.appendChild(tile);
+  });
+}
+
+function initNews(){
+  buildKwChips();
+  document.getElementById('news-body').innerHTML=`
+    <div class="news-refresh-bar">
+      <span id="news-countdown">다음 갱신까지 ${newsRefreshSec}초</span>
+      <div class="refresh-progress"><div class="refresh-bar-fill" id="rfill" style="width:100%"></div></div>
+    </div>
+    <div class="news-grid" id="news-grid"></div>`;
+  fetchNews();
+  newsTimer=setInterval(()=>{
+    newsCountdown--;
+    const el=document.getElementById('news-countdown');
+    if(el) el.textContent=`다음 갱신까지 ${newsCountdown}초`;
+    const fill=document.getElementById('rfill');
+    if(fill) fill.style.width=(newsCountdown/newsRefreshSec*100)+'%';
+    if(newsCountdown<=0){newsCountdown=newsRefreshSec;fetchNews();}
+  },1000);
+}
+
+async function fetchOneRSS(key){
+  const src=RSS_SOURCES[key];
+  const res=await fetch(PROXY+encodeURIComponent(src.url),{signal:AbortSignal.timeout(14000)});
+  const json=await res.json();
+  const doc=new DOMParser().parseFromString(json.contents,'text/xml');
+  return Array.from(doc.querySelectorAll('item')).map(it=>{
+    const title=(it.querySelector('title')?.textContent||'').replace(/<!\[CDATA\[|\]\]>/g,'').trim();
+    const link=it.querySelector('link')?.textContent?.trim()||it.querySelector('link')?.nextSibling?.nodeValue?.trim()||'#';
+    const desc=(it.querySelector('description')?.textContent||'').replace(/<[^>]+>/g,'').replace(/<!\[CDATA\[|\]\]>/g,'').trim().slice(0,200);
+    const pub=new Date(it.querySelector('pubDate')?.textContent?.trim()||0);
+    return {title,link,desc,pub,src:key,srcName:src.name,cls:src.cls};
+  }).filter(a=>a.title);
+}
+
+window.fetchNews=async function(){
+  document.getElementById('news-status').textContent='가져오는 중...';
+  newsCountdown=newsRefreshSec;
+  const res=await Promise.allSettled(Object.keys(RSS_SOURCES).map(fetchOneRSS));
+  allArticles=res.flatMap(r=>r.status==='fulfilled'?r.value:[]).sort((a,b)=>b.pub-a.pub);
+  const now=new Date();
+  document.getElementById('news-status').textContent=
+    `갱신: ${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')} · ${allArticles.length}건`;
+  renderTiles(); renderFeed();
+};
+
+function renderFeed(){
+  const grid=document.getElementById('news-grid');
+  if(!grid)return;
+  const activeLbl=[...activeKw];
+  const allKw=[...KW_BANKS,...KW_TOPICS];
+  let items=allArticles.filter(a=>activeSrc[a.src]);
+  if(activeLbl.length){
+    const kwObjs=allKw.filter(k=>activeLbl.includes(k.label));
+    items=items.filter(a=>kwObjs.some(kw=>matchesKw(a,kw)));
+  }
+  if(!items.length){grid.innerHTML='<div class="news-empty">기사가 없습니다</div>';return;}
+  grid.innerHTML=items.map(a=>`<a class="news-card" href="${a.link}" target="_blank" rel="noopener">
+    <span class="nc-src ${a.cls}">${a.srcName}</span>
+    <div class="nc-title">${a.title}</div>
+    ${a.desc?`<div class="nc-desc">${a.desc}</div>`:''}
+    <div class="nc-time">${timeSince(a.pub)}</div>
+  </a>`).join('');
+}
+
+function timeSince(date){
+  const s=Math.floor((Date.now()-date)/1000);
+  if(s<60)return'방금';
+  const m=Math.floor(s/60);if(m<60)return m+'분 전';
+  const h=Math.floor(m/60);if(h<24)return h+'시간 전';
+  return Math.floor(h/24)+'일 전';
+}
 
 // ── PROVINCE PANEL ────────────────────────────────────────
 let provPinned=false;
