@@ -463,7 +463,16 @@ gMap.selectAll('path')
     showProvPanel(eng, ko);
   });
 svg.on('click',()=>closeProvPanel());
-const zB=d3.zoom().scaleExtent([0.6,25]).on('zoom',e=>{gMap.attr('transform',e.transform);gDots.attr('transform',e.transform);});
+// zoom 필터: path(도 경계)/circle(지점 마커) 위에서는 zoom 비활성
+// → pointerdown.preventDefault() 미호출 → click 이벤트 정상 발화
+const zB=d3.zoom()
+  .filter(e=>{
+    if(e.type==='wheel') return true;
+    if(e.button!==0) return false;
+    const tn=e.target.nodeName;
+    return tn==='g'||tn==='svg';
+  })
+  .scaleExtent([0.6,25]).on('zoom',e=>{gMap.attr('transform',e.transform);gDots.attr('transform',e.transform);});
 svg.call(zB);
 document.getElementById('zi').onclick=()=>svg.transition().duration(250).call(zB.scaleBy,1.6);
 document.getElementById('zo').onclick=()=>svg.transition().duration(250).call(zB.scaleBy,1/1.6);
