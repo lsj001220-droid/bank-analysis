@@ -340,9 +340,9 @@ html,body{height:100%;font-family:'Noto Sans KR',sans-serif;background:var(--bg)
         <div class="ana-sub" id="news-status">로딩 중...</div>
       </div>
       <div style="display:flex;gap:5px;align-items:center">
-        <label class="src-toggle" data-src="yna"><input type="checkbox" checked>연합</label>
-        <label class="src-toggle" data-src="mk"><input type="checkbox" checked>매경</label>
-        <label class="src-toggle" data-src="hankyung"><input type="checkbox" checked>한경</label>
+        <label class="src-toggle" data-src="yna"><input type="checkbox" checked>금융/은행</label>
+        <label class="src-toggle" data-src="mk"><input type="checkbox" checked>채용/취업</label>
+        <label class="src-toggle" data-src="hankyung"><input type="checkbox" checked>금리/경제</label>
         <button onclick="fetchNews()" class="tbtn" style="margin-left:4px">↺ 갱신</button>
       </div>
       <!-- 은행 키워드 -->
@@ -457,16 +457,23 @@ const path=d3.geoPath().projection(proj);
 gMap.selectAll('path')
   .data(topojson.feature(TOPO,TOPO.objects['skorea_provinces_2018_geo']).features)
   .join('path').attr('class','prov').attr('d',path)
-  .on('pointerdown',function(e){e.stopPropagation();})
-  .on('click', function(e,d){
+  .on('pointerdown',function(e,d){
     e.stopPropagation();
+    this.__pd={x:e.clientX,y:e.clientY,d:d};
+  })
+  .on('pointerup',function(e,d){
+    const pd=this.__pd;this.__pd=null;
+    if(!pd)return;
+    if((e.clientX-pd.x)**2+(e.clientY-pd.y)**2>36)return;
     gMap.selectAll('.prov').classed('selected',false);
     d3.select(this).classed('selected',true);
-    const eng=d.properties.name_eng||'';
-    const ko=PROV[eng]?PROV[eng].name:d.properties.name||eng;
-    showProvPanel(eng, ko);
+    const eng=pd.d.properties.name_eng||'';
+    const ko=PROV[eng]?PROV[eng].name:pd.d.properties.name||eng;
+    showProvPanel(eng,ko);
   });
-svg.on('click',()=>closeProvPanel());
+svg.on('pointerup',function(e){
+  if(e.target===this||e.target.nodeName==='svg')closeProvPanel();
+});
 // zoom 필터: path(도 경계)/circle(지점 마커) 위에서는 zoom 비활성
 // → pointerdown.preventDefault() 미호출 → click 이벤트 정상 발화
 const zB=d3.zoom()
@@ -517,10 +524,15 @@ function drawDots(){
     .style('cursor','pointer')
     .on('mouseover',showTip).on('mousemove',moveTip)
     .on('mouseout',()=>document.getElementById('tip').style.display='none')
-    .on('pointerdown',function(e){e.stopPropagation();})
-    .on('click',function(e,d){
+    .on('pointerdown',function(e,d){
       e.stopPropagation();
-      const pk=getProvKey(d[2]);
+      this.__pd={x:e.clientX,y:e.clientY,d:d};
+    })
+    .on('pointerup',function(e,d){
+      const pd=this.__pd;this.__pd=null;
+      if(!pd)return;
+      if((e.clientX-pd.x)**2+(e.clientY-pd.y)**2>36)return;
+      const pk=getProvKey(pd.d[2]);
       if(pk&&PROV[pk]){
         gMap.selectAll('.prov').classed('selected',false);
         showProvPanel(pk,PROV[pk].name);
@@ -660,15 +672,11 @@ requestAnimationFrame(fit);
 let newsInited=false, newsTimer=null, newsRefreshSec=600, newsCountdown=600;
 
 const RSS_SOURCES={
-  yna:     {name:"연합뉴스", url:"https://www.yna.co.kr/RSS/economy.xml",  cls:"yna"},
-  mk:      {name:"매일경제", url:"https://www.mk.co.kr/rss/40300001/",      cls:"mk"},
-  hankyung:{name:"한국경제", url:"https://www.hankyung.com/feed/economy",   cls:"hankyung"},
+  yna:     {name:"금융/은행", url:"https://news.google.com/rss/search?q=국내+은행+금융+지점&hl=ko&gl=KR&ceid=KR:ko", cls:"yna"},
+  mk:      {name:"채용/취업", url:"https://news.google.com/rss/search?q=은행+채용+공채+금융권+취업&hl=ko&gl=KR&ceid=KR:ko", cls:"mk"},
+  hankyung:{name:"금리/경제", url:"https://news.google.com/rss/search?q=한국+금리+경제+부동산+은행원&hl=ko&gl=KR&ceid=KR:ko", cls:"hankyung"},
 };
-const PROXIES=[
-  {url:u=>"https://corsproxy.io/?"+encodeURIComponent(u), raw:true},
-  {url:u=>"https://api.allorigins.win/get?url="+encodeURIComponent(u), raw:false},
-  {url:u=>"https://thingproxy.freeboard.io/fetch/"+encodeURIComponent(u), raw:true},
-];
+const RSS2JSON="https://api.rss2json.com/v1/api.json?count=20&rss_url=";
 const activeSrc={};
 Object.keys(RSS_SOURCES).forEach(k=>activeSrc[k]=true);
 
@@ -781,21 +789,14 @@ function initNews(){
 
 async function fetchOneRSS(key){
   const src=RSS_SOURCES[key];
-  let xml=null;
-  for(const p of PROXIES){
-    try{
-      const res=await fetch(p.url(src.url),{signal:AbortSignal.timeout(10000)});
-      const text=p.raw?await res.text():(await res.json()).contents||'';
-      if(text&&text.includes('<item>')){xml=text;break;}
-    }catch(e){}
-  }
-  if(!xml) return [];
-  const doc=new DOMParser().parseFromString(xml,'text/xml');
-  return Array.from(doc.querySelectorAll('item')).map(it=>{
-    const title=(it.querySelector('title')?.textContent||'').replace(/<!\[CDATA\[|\]\]>/g,'').trim();
-    const link=it.querySelector('link')?.textContent?.trim()||it.querySelector('link')?.nextSibling?.nodeValue?.trim()||'#';
-    const desc=(it.querySelector('description')?.textContent||'').replace(/<[^>]+>/g,'').replace(/<!\[CDATA\[|\]\]>/g,'').trim().slice(0,200);
-    const pub=new Date(it.querySelector('pubDate')?.textContent?.trim()||0);
+  const res=await fetch(RSS2JSON+encodeURIComponent(src.url),{signal:AbortSignal.timeout(14000)});
+  const json=await res.json();
+  if(json.status!=='ok'||!json.items) return [];
+  return json.items.map(it=>{
+    const title=(it.title||'').replace(/<[^>]+>/g,'').trim();
+    const link=it.link||'#';
+    const desc=(it.description||'').replace(/<[^>]+>/g,'').replace(/<!\[CDATA\[|\]\]>/g,'').trim().slice(0,200);
+    const pub=new Date(it.pubDate||0);
     return {title,link,desc,pub,src:key,srcName:src.name,cls:src.cls};
   }).filter(a=>a.title);
 }
