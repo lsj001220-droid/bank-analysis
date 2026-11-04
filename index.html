@@ -170,6 +170,12 @@ html,body{height:100%;font-family:'Noto Sans KR',sans-serif;background:var(--bg)
       <line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
     </svg>
   </button>
+  <button class="nav-btn" id="nb-fin" onclick="showPage('fin')" title="재무비교">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M12 6v6l4 2"/>
+    </svg>
+  </button>
   <button class="nav-btn" style="margin-top:auto" onclick="toggleTheme()" title="테마">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <circle cx="12" cy="12" r="5"/>
@@ -218,6 +224,23 @@ html,body{height:100%;font-family:'Noto Sans KR',sans-serif;background:var(--bg)
     </div>
   </div>
 
+  <!-- 재무비교 -->
+  <div class="page" id="page-fin">
+    <div class="ana-header">
+      <div>
+        <div class="ana-title">은행 재무 비교</div>
+        <div class="ana-sub">금융위원회 금융통계 API · 기준: 202409 · ROA·ROE·BIS비율·연체율</div>
+      </div>
+      <div class="tab-row">
+        <button class="tab-btn active" id="ftab-roa"  onclick="switchFinTab('roa')">ROA</button>
+        <button class="tab-btn"        id="ftab-roe"  onclick="switchFinTab('roe')">ROE</button>
+        <button class="tab-btn"        id="ftab-bis"  onclick="switchFinTab('bis')">BIS비율</button>
+        <button class="tab-btn"        id="ftab-dlq"  onclick="switchFinTab('dlq')">연체율</button>
+      </div>
+    </div>
+    <div class="ana-body" id="fin-body"></div>
+  </div>
+
   <!-- 분석 -->
   <div class="page" id="page-ana">
     <div class="ana-header">
@@ -245,6 +268,7 @@ const COLORS = {"NH농협은행": "#3DAD6E", "KB국민은행": "#F0A500", "우�
 const ORDER  = ["NH농협은행", "KB국민은행", "우리은행", "신한은행", "IBK기업은행", "하나은행", "BNK부산은행", "iM뱅크(구 대구은행)", "BNK경남은행", "SC제일은행", "Sh수협은행", "광주은행", "전북은행", "한국산업은행", "제주은행", "수출입은행", "한국씨티은행"];
 const COUNTS = {"NH농협은행": 1064, "KB국민은행": 773, "우리은행": 659, "신한은행": 652, "IBK기업은행": 629, "하나은행": 607, "BNK부산은행": 204, "iM뱅크(구 대구은행)": 198, "BNK경남은행": 152, "SC제일은행": 150, "Sh수협은행": 129, "광주은행": 119, "전북은행": 83, "한국산업은행": 60, "제주은행": 30, "수출입은행": 13, "한국씨티은행": 12};
 const MAX_C  = 1064;
+const FIN    = {"우리은행":{"name":"우리은행","총자산평잔":440105418220000,"자기자본평잔":25563178510000,"순이익":2605774120000,"ROA":0.59,"ROE":10.19,"BIS":16.4,"기본자본비율":14.48,"보통주자본비율":13.29,"연체율":0.3,"총자산":477171932000000},"한국스탠다드차타드은행":{"name":"한국스탠다드차타드은행","총자산평잔":102981021230000,"자기자본평잔":5383629020000,"순이익":307011000000,"ROA":0.3,"ROE":5.7,"BIS":22.99,"기본자본비율":19.97,"보통주자본비율":18.87,"연체율":0.3,"총자산":91736724000000},"한국씨티은행":{"name":"한국씨티은행","총자산평잔":42391086000000,"자기자본평잔":5929677000000,"순이익":293428000000,"ROA":0.69,"ROE":4.95,"BIS":34.22,"기본자본비율":33.2,"보통주자본비율":33.2,"연체율":2.08,"총자산":45940838000000},"아이엠뱅크":{"name":"아이엠뱅크","총자산평잔":72855388000000,"자기자본평잔":4858671000000,"순이익":344204000000,"ROA":0.47,"ROE":7.08,"BIS":16.76,"기본자본비율":14.71,"보통주자본비율":14.41,"연체율":0.73},"BNK부산은행":{"name":"BNK부산은행","총자산평잔":77339647000000,"자기자본평잔":5728124860000,"순이익":374948000000,"ROA":0.48,"ROE":6.55,"BIS":16.75,"기본자본비율":16.23,"보통주자본비율":15.52,"연체율":0.67},"광주은행":{"name":"광주은행","총자산평잔":30641969000000,"자기자본평잔":2222772000000,"순이익":276324000000,"ROA":0.9,"ROE":12.43,"BIS":16.31,"기본자본비율":16.09,"보통주자본비율":16.09,"연체율":0.56},"제주은행":{"name":"제주은행","총자산평잔":7282522530000,"자기자본평잔":574889540000,"순이익":1363570000,"ROA":0.02,"ROE":0.24,"BIS":17.78,"기본자본비율":16.92,"보통주자본비율":13.77,"연체율":1.25},"전북은행":{"name":"전북은행","총자산평잔":22485582360000,"자기자본평잔":1789760980000,"순이익":185827040000,"ROA":0.83,"ROE":10.38,"BIS":14.1,"기본자본비율":13.79,"보통주자본비율":13.73,"연체율":0.78},"BNK경남은행":{"name":"BNK경남은행","총자산평잔":51347737000000,"자기자본평잔":3531993000000,"순이익":308387000000,"ROA":0.6,"ROE":8.73,"BIS":14.99,"기본자본비율":14.51,"보통주자본비율":13.69,"연체율":0.38},"IBK기업은행":{"name":"IBK기업은행","총자산평잔":410544823000000,"자기자본평잔":30059588000000,"순이익":2517158000000,"ROA":0.61,"ROE":8.37,"BIS":14.88,"기본자본비율":13.43,"보통주자본비율":11.67,"연체율":0.86},"한국산업은행":{"name":"한국산업은행","총자산평잔":327459592000000,"자기자본평잔":41149093000000,"순이익":1386345000000,"ROA":0.42,"ROE":3.37,"BIS":14.36,"기본자본비율":13.26,"보통주자본비율":13.26,"연체율":0.37},"수출입은행":{"name":"수출입은행","총자산평잔":127457814000000,"자기자본평잔":19713556000000,"순이익":352786000000,"ROA":0.28,"ROE":1.79,"BIS":15.67,"기본자본비율":14.11,"보통주자본비율":14.11,"연체율":0.13},"KB국민은행":{"name":"KB국민은행","총자산평잔":525749335000000,"자기자본평잔":36088962000000,"순이익":2770373000000,"ROA":0.53,"ROE":7.68,"BIS":18.19,"기본자본비율":15.82,"보통주자본비율":15.35,"연체율":0.3},"신한은행":{"name":"신한은행","총자산평잔":484075686000000,"자기자본평잔":31576276000000,"순이익":3018422000000,"ROA":0.62,"ROE":9.56,"BIS":18.25,"기본자본비율":15.96,"보통주자본비율":15.0,"연체율":0.29},"NH농협은행":{"name":"NH농협은행","총자산평잔":406473290000000,"자기자본평잔":23457569000000,"순이익":1772463000000,"ROA":0.44,"ROE":7.56,"BIS":18.64,"기본자본비율":17.03,"보통주자본비율":15.89,"연체율":0.53},"하나은행":{"name":"하나은행","총자산평잔":486694900000000,"자기자본평잔":30792278000000,"순이익":3254011000000,"ROA":0.67,"ROE":10.57,"BIS":17.64,"기본자본비율":16.29,"보통주자본비율":16.11,"연체율":0.34},"주식회사 케이뱅크":{"name":"주식회사 케이뱅크","총자산평잔":23321154000000,"자기자본평잔":1934624000000,"순이익":97003000000,"ROA":0.42,"ROE":5.01,"BIS":14.42,"기본자본비율":13.26,"보통주자본비율":13.26,"연체율":0.88},"Sh수협은행":{"name":"Sh수협은행","총자산평잔":56083328000000,"자기자본평잔":3915470000000,"순이익":231909000000,"ROA":0.41,"ROE":5.92,"BIS":15.52,"기본자본비율":14.32,"보통주자본비율":12.51,"연체율":0.5},"주식회사 카카오뱅크":{"name":"주식회사 카카오뱅크","총자산평잔":57955540000000,"자기자본평잔":6250984000000,"순이익":431268000000,"ROA":0.74,"ROE":6.9,"BIS":28.51,"기본자본비율":27.37,"보통주자본비율":27.37,"연체율":0.47},"토스뱅크 주식회사":{"name":"토스뱅크 주식회사","총자산평잔":28573992650000,"자기자본평잔":1549217650000,"순이익":46885490000,"ROA":0.16,"ROE":3.03,"연체율":0.99},"일반은행":{"name":"일반은행","총자산평잔":2453800978990000,"자기자본평잔":163775037560000,"순이익":14315229220000,"ROA":0.58,"ROE":8.74,"BIS":18.1,"기본자본비율":16.25,"보통주자본비율":15.6,"연체율":0.37},"시중은행":{"name":"시중은행","총자산평잔":2154852834450000,"자기자본평잔":140192671530000,"순이익":12593223120000,"ROA":0.58,"ROE":8.98,"BIS":18.09,"기본자본비율":16.08,"보통주자본비율":15.4},"지방은행":{"name":"지방은행","총자산평잔":189097457890000,"자기자본평잔":13847540380000,"순이익":1146849610000,"ROA":0.61,"ROE":8.28,"BIS":15.86,"기본자본비율":15.42,"보통주자본비율":14.79},"인터넷전문은행":{"name":"인터넷전문은행","BIS":24.45,"기본자본비율":23.31,"보통주자본비율":23.31},"특수은행":{"name":"특수은행","BIS":15.44,"기본자본비율":14.08,"보통주자본비율":13.35},"국내은행":{"name":"국내은행","BIS":16.88,"기본자본비율":15.25,"보통주자본비율":14.56}};
 
 // theme
 let theme='system';
@@ -263,6 +287,7 @@ window.showPage=function(pg){
   document.getElementById('nb-'+pg).classList.add('active');
   if(pg==='map') setTimeout(fit,50);
   if(pg==='ana'&&!anaBuilt) buildAna();
+  if(pg==='fin'&&!finBuilt){finBuilt=true;renderFin();}
 };
 
 // ── MAP ───────────────────────────────────────────────────
@@ -417,5 +442,149 @@ function renderAna(){
 }
 
 requestAnimationFrame(fit);
+
+// ── FINANCE PAGE ──────────────────────────────────────────
+let finBuilt=false, finTab='roa';
+window.switchFinTab=function(t){
+  finTab=t;
+  document.querySelectorAll('[id^="ftab-"]').forEach(b=>b.classList.remove('active'));
+  document.getElementById('ftab-'+t).classList.add('active');
+  renderFin();
+};
+
+// 은행명 표시용 단축명
+const SHORT={
+  "우리은행":"우리","KB국민은행":"국민","신한은행":"신한","하나은행":"하나",
+  "IBK기업은행":"기업","NH농협은행":"농협","SC제일은행":"SC","한국씨티은행":"씨티",
+  "BNK부산은행":"부산","iM뱅크(구 대구은행)":"iM(대구)","BNK경남은행":"경남",
+  "광주은행":"광주","전북은행":"전북","제주은행":"제주","Sh수협은행":"수협",
+  "한국산업은행":"산업","수출입은행":"수출입",
+  "한국스탠다드차타드은행":"SC","아이엠뱅크":"iM뱅크",
+  "주식회사 케이뱅크":"케이뱅크","주식회사 카카오뱅크":"카카오","토스뱅크 주식회사":"토스뱅크",
+};
+function shortName(nm){ return SHORT[nm]||nm.replace("은행","").replace("주식회사 ","").slice(0,6); }
+
+const FIN_CFG={
+  roa:{key:"ROA",   label:"총자산순이익률 (ROA, %)",   color:"#3B82F6", good:"high", safe:0.5, warn:0.3},
+  roe:{key:"ROE",   label:"자기자본순이익률 (ROE, %)",  color:"#8B5CF6", good:"high", safe:7,   warn:4},
+  bis:{key:"BIS",   label:"BIS 자기자본비율 (%)",       color:"#10B981", good:"high", safe:14,  warn:11.5},
+  dlq:{key:"연체율", label:"원화대출 연체율 (%)",        color:"#EF4444", good:"low",  safe:0.5, warn:1.0},
+};
+
+function finColor(val, cfg){
+  if(val==null)return'var(--t3)';
+  const{good,safe,warn}=cfg;
+  if(good==='high'){
+    if(val>=safe)return'var(--green)';
+    if(val>=warn)return'var(--amber)';
+    return'var(--red)';
+  }else{
+    if(val<=safe)return'var(--green)';
+    if(val<=warn)return'var(--amber)';
+    return'var(--red)';
+  }
+}
+
+function renderFin(){
+  const body=document.getElementById('fin-body');
+  body.innerHTML='';
+  const cfg=FIN_CFG[finTab];
+  const key=cfg.key;
+
+  // 데이터 정렬
+  const rows=Object.values(FIN)
+    .map(d=>({...d,_v:d[key]!=null?parseFloat(d[key]):null}))
+    .filter(d=>d._v!==null);
+  if(cfg.good==='high') rows.sort((a,b)=>b._v-a._v);
+  else rows.sort((a,b)=>a._v-b._v);
+
+  const vals=rows.map(r=>r._v);
+  const maxV=Math.max(...vals), minV=Math.min(...vals);
+
+  // 1. 개요 카드 (상위 3 / 하위 3)
+  const s0=document.createElement('div');s0.className='ana-sec';
+  const best3=rows.slice(0,3), worst3=[...rows].reverse().slice(0,3);
+  const label1=cfg.good==='high'?'🏆 상위 (유리)':'🏆 상위 (유리)';
+  const label2=cfg.good==='high'?'⚠️ 하위':'⚠️ 하위';
+  s0.innerHTML=`<div class="sec-ttl">${cfg.label} 순위</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:4px">
+    <div><div style="font-size:10px;font-weight:700;color:var(--green);margin-bottom:6px">${label1}</div>
+    ${best3.map((r,i)=>`<div class="rbar-row"><span style="width:18px;font-size:11px;font-weight:700;color:var(--t3)">${i+1}</span>
+      <span class="rbar-name" style="width:80px">${shortName(r.name)}</span>
+      <div class="rbar-track"><div class="rbar-fill" style="width:${((r._v-minV)/(maxV-minV)||0)*100}%;background:var(--green)"></div></div>
+      <span class="rbar-val" style="color:var(--green)">${r._v.toFixed(2)}</span></div>`).join('')}
+    </div>
+    <div><div style="font-size:10px;font-weight:700;color:var(--red);margin-bottom:6px">${label2}</div>
+    ${worst3.map((r,i)=>`<div class="rbar-row"><span style="width:18px;font-size:11px;font-weight:700;color:var(--t3)">${rows.length-2+i}</span>
+      <span class="rbar-name" style="width:80px">${shortName(r.name)}</span>
+      <div class="rbar-track"><div class="rbar-fill" style="width:${((r._v-minV)/(maxV-minV)||0)*100}%;background:var(--red)"></div></div>
+      <span class="rbar-val" style="color:var(--red)">${r._v.toFixed(2)}</span></div>`).join('')}
+    </div>
+  </div>`;
+  body.appendChild(s0);
+
+  // 2. 전체 바 차트
+  const s1=document.createElement('div');s1.className='ana-sec';
+  s1.innerHTML=`<div class="sec-ttl">전체 은행 비교 — ${cfg.label}</div>`;
+  rows.forEach(r=>{
+    const pct=maxV>0?((r._v-Math.min(0,minV))/(maxV-Math.min(0,minV))*100).toFixed(1):0;
+    const col=finColor(r._v,cfg);
+    const div=document.createElement('div');div.className='rbar-row';
+    div.innerHTML=`
+      <span class="rbar-name" style="width:100px;font-size:11px" title="${r.name}">${shortName(r.name)}</span>
+      <div class="rbar-track"><div class="rbar-fill" style="width:${pct}%;background:${col}"></div></div>
+      <span class="rbar-val" style="color:${col}">${r._v.toFixed(2)}</span>
+      <span class="rbar-sub">${r._v>=cfg.safe?(cfg.good==='high'?'양호':'양호'):(r._v>=(cfg.good==='high'?cfg.warn:cfg.safe)?'보통':'주의')}</span>`;
+    s1.appendChild(div);
+  });
+  body.appendChild(s1);
+
+  // 3. 전체 비교 테이블 (모든 지표 한 눈에)
+  const s2=document.createElement('div');s2.className='ana-sec';
+  s2.innerHTML=`<div class="sec-ttl">4대 지표 종합 비교</div>`;
+  const allRows=Object.values(FIN);
+  const hmap_w=document.createElement('div');hmap_w.className='hmap-wrap';
+  const tbl=document.createElement('table');tbl.className='hmap';
+  const thead=tbl.createTHead(),hr=thead.insertRow();
+  ['은행','ROA(%)','ROE(%)','BIS(%)','연체율(%)','총자산(조)'].forEach((h,i)=>{
+    const th=document.createElement('th');th.textContent=h;
+    if(i===0)th.style.textAlign='left';
+    hr.appendChild(th);
+  });
+  const tbody=tbl.createTBody();
+  allRows.sort((a,b)=>{
+    const va=a[key]!=null?parseFloat(a[key]):-999;
+    const vb=b[key]!=null?parseFloat(b[key]):-999;
+    return cfg.good==='high'?vb-va:va-vb;
+  });
+  allRows.forEach(r=>{
+    const tr=tbody.insertRow();
+    const td0=tr.insertCell();td0.textContent=shortName(r.name);td0.title=r.name;
+    const metrics=[
+      {v:r.ROA,   cfg:FIN_CFG.roa},
+      {v:r.ROE,   cfg:FIN_CFG.roe},
+      {v:r.BIS,   cfg:FIN_CFG.bis},
+      {v:r['연체율'],cfg:FIN_CFG.dlq},
+    ];
+    metrics.forEach(m=>{
+      const td=tr.insertCell();
+      if(m.v==null){td.textContent='—';td.classList.add('cell-zero');return;}
+      const fv=parseFloat(m.v);
+      td.textContent=fv.toFixed(2);
+      td.style.color=finColor(fv,m.cfg);
+      td.style.fontWeight='600';
+    });
+    // 총자산 (조 단위)
+    const tdA=tr.insertCell();
+    const asset=r['총자산']||r['총자산평잔'];
+    tdA.textContent=asset?`${(asset/1e12).toFixed(0)}조`:'—';
+    tdA.style.color='var(--t2)';
+  });
+  hmap_w.appendChild(tbl);s2.appendChild(hmap_w);body.appendChild(s2);
+}
+
+// fin 페이지 초기화
+document.getElementById('page-fin').addEventListener('show',()=>{if(!finBuilt){finBuilt=true;renderFin();}});
+
 })();
 </script>
