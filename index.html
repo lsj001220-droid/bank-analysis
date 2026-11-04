@@ -168,6 +168,8 @@ html,body{height:100%;font-family:'Noto Sans KR',sans-serif;background:var(--bg)
 .nc-src.yna{background:#e8f0fe;color:#1a56db;}
 .nc-src.mk{background:#fef3c7;color:#92400e;}
 .nc-src.hankyung{background:#ecfdf5;color:#065f46;}
+.nc-src.newsis{background:#fce7f3;color:#9d174d;}
+.nc-src.mt{background:#f0fdf4;color:#166534;}
 .nc-title{font-size:13px;font-weight:600;line-height:1.5;color:var(--text);}
 .nc-desc{font-size:11.5px;color:var(--t2);line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
 .nc-time{font-size:10px;color:var(--t3);margin-top:auto;padding-top:3px;}
@@ -361,10 +363,12 @@ html,body{height:100%;font-family:'Noto Sans KR',sans-serif;background:var(--bg)
         <div class="ana-title">금융·은행 뉴스</div>
         <div class="ana-sub" id="news-status">로딩 중...</div>
       </div>
-      <div style="display:flex;gap:5px;align-items:center">
-        <label class="src-toggle" data-src="yna"><input type="checkbox" checked>금융/은행</label>
-        <label class="src-toggle" data-src="mk"><input type="checkbox" checked>채용/취업</label>
-        <label class="src-toggle" data-src="hankyung"><input type="checkbox" checked>금리/경제</label>
+      <div style="display:flex;gap:5px;align-items:center;flex-wrap:wrap">
+        <label class="src-toggle" data-src="yna"><input type="checkbox" checked>연합뉴스</label>
+        <label class="src-toggle" data-src="mk"><input type="checkbox" checked>매일경제</label>
+        <label class="src-toggle" data-src="hankyung"><input type="checkbox" checked>한국경제</label>
+        <label class="src-toggle" data-src="newsis"><input type="checkbox" checked>뉴시스</label>
+        <label class="src-toggle" data-src="mt"><input type="checkbox" checked>머니투데이</label>
         <button onclick="fetchNews()" class="tbtn" style="margin-left:4px">↺ 갱신</button>
       </div>
       <!-- 은행 키워드 -->
@@ -712,14 +716,10 @@ requestAnimationFrame(fit);
 // ── NEWS PAGE ─────────────────────────────────────────────
 let newsInited=false, newsTimer=null, newsRefreshSec=600, newsCountdown=600;
 
-const RSS_SOURCES={
-  yna:     {name:"금융/은행", url:"https://news.google.com/rss/search?q=국내+은행+금융+지점&hl=ko&gl=KR&ceid=KR:ko", cls:"yna"},
-  mk:      {name:"채용/취업", url:"https://news.google.com/rss/search?q=은행+채용+공채+금융권+취업&hl=ko&gl=KR&ceid=KR:ko", cls:"mk"},
-  hankyung:{name:"금리/경제", url:"https://news.google.com/rss/search?q=한국+금리+경제+부동산+은행원&hl=ko&gl=KR&ceid=KR:ko", cls:"hankyung"},
-};
-const RSS2JSON="https://api.rss2json.com/v1/api.json?count=20&rss_url=";
+// 소스 메타 (news.json의 src 필드 기준 토글에 사용)
+const SRC_KEYS=['yna','mk','hankyung','newsis','mt'];
 const activeSrc={};
-Object.keys(RSS_SOURCES).forEach(k=>activeSrc[k]=true);
+SRC_KEYS.forEach(k=>activeSrc[k]=true);
 
 // 키워드 정의 ─ {label, terms[], type}
 const KW_BANKS=[
