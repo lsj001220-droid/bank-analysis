@@ -5,6 +5,9 @@ on:
     - cron: '0 */2 * * *'   # 매 2시간마다
   workflow_dispatch:          # 수동 실행 가능
 
+permissions:
+  contents: write
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
