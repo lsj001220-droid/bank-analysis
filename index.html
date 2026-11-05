@@ -205,10 +205,10 @@ html,body{height:100%;font-family:'Noto Sans KR',sans-serif;background:var(--bg)
 .gg-end-date{font-size:10px;color:var(--t3);margin-left:auto;}
 .gg-tip{background:var(--s2);border-radius:var(--r);padding:12px 14px;font-size:12px;color:var(--t2);line-height:1.75;}
 .gg-tip strong{color:var(--text);}
-.site-footer{margin-top:auto;padding:18px 16px;border-top:1px solid var(--border);text-align:center;}
-.site-footer a{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;background:var(--accent);color:#fff;border-radius:20px;font-size:13px;font-weight:600;text-decoration:none;transition:opacity .15s;}
-.site-footer a:hover{opacity:.85;}
-.site-footer a svg{flex-shrink:0;}
+.nav-site-link{margin-top:auto;padding:10px 8px;border-top:1px solid var(--border);}
+.nav-site-link a{display:flex;align-items:center;gap:6px;padding:8px 10px;background:var(--s2);border-radius:var(--r);font-size:11px;font-weight:600;color:var(--t2);text-decoration:none;line-height:1.35;transition:background .15s;}
+.nav-site-link a:hover{background:var(--s3);color:var(--text);}
+.nav-site-link svg{flex-shrink:0;color:var(--accent);}
 
 /* to (채용TO) page */
 .to-26-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:4px;}
@@ -346,7 +346,13 @@ html,body{height:100%;font-family:'Noto Sans KR',sans-serif;background:var(--bg)
       <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
     </svg>
   </button>
-  <button class="nav-btn" style="margin-top:auto" onclick="toggleTheme()" title="테마">
+  <div class="nav-site-link">
+    <a href="https://tpacstudy.site/" target="_blank" rel="noopener" title="다른 은행 준비 사이트">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      다른 은행 준비 사이트가 궁금하다면?
+    </a>
+  </div>
+  <button class="nav-btn" onclick="toggleTheme()" title="테마">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <circle cx="12" cy="12" r="5"/>
       <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
@@ -1584,11 +1590,5 @@ function renderGGRegion(body){
 
 })();
 </script>
-<footer class="site-footer">
-  <a href="https://tpacstudy.site/" target="_blank" rel="noopener">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-    다른 은행 준비 사이트가 궁금하다면?
-  </a>
-</footer>
 </body>
 </html>
