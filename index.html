@@ -510,13 +510,17 @@ html,body{height:100%;font-family:'Noto Sans KR',sans-serif;background:var(--bg)
     <div class="ana-header">
       <div>
         <div class="ana-title">지역별 현황</div>
-        <div class="ana-sub">도·특별시별 지점 밀도 — 인구 10만명당 지점 수</div>
+        <div class="ana-sub" id="reg-sub">도·특별시별 지점 밀도 — 인구 10만명당 지점 수</div>
       </div>
       <div class="tab-row">
-        <button class="tab-btn active" id="rsort-den" onclick="switchRegSort('den')">10만당↓</button>
-        <button class="tab-btn"        id="rsort-tot" onclick="switchRegSort('tot')">총지점↓</button>
-        <button class="tab-btn"        id="rsort-pop" onclick="switchRegSort('pop')">인구↓</button>
+        <button class="tab-btn active" id="regtab-region" onclick="switchRegTab('region')">지역별</button>
+        <button class="tab-btn"        id="regtab-bank"   onclick="switchRegTab('bank')">은행별 비중</button>
       </div>
+    </div>
+    <div id="reg-sort-row" style="padding:6px 14px 0;display:flex;gap:6px">
+      <button class="tab-btn active" id="rsort-den" onclick="switchRegSort('den')">10만당↓</button>
+      <button class="tab-btn"        id="rsort-tot" onclick="switchRegSort('tot')">총지점↓</button>
+      <button class="tab-btn"        id="rsort-pop" onclick="switchRegSort('pop')">인구↓</button>
     </div>
     <div style="flex:1;overflow-y:auto" id="reg-scroll">
       <div id="reg-body"></div>
@@ -1395,7 +1399,24 @@ function renderTOMutual(body){
 }
 
 // ── REGION PAGE ───────────────────────────────────────────
-let regBuilt=false, regSort='den';
+let regBuilt=false, regSort='den', regTab='region', regSelBank=null;
+
+window.switchRegTab=function(t){
+  regTab=t;
+  document.querySelectorAll('[id^="regtab-"]').forEach(b=>b.classList.remove('active'));
+  document.getElementById('regtab-'+t).classList.add('active');
+  const sortRow=document.getElementById('reg-sort-row');
+  const sub=document.getElementById('reg-sub');
+  if(t==='bank'){
+    sortRow.style.display='none';
+    sub.textContent='은행별 지역 집중도 — 지점 수의 지역별 비중';
+  }else{
+    sortRow.style.display='flex';
+    sub.textContent='도·특별시별 지점 밀도 — 인구 10만명당 지점 수';
+  }
+  renderReg();
+};
+
 window.switchRegSort=function(s){
   regSort=s;
   document.querySelectorAll('[id^="rsort-"]').forEach(b=>b.classList.remove('active'));
@@ -1412,9 +1433,78 @@ function bankShortLabel(nm){
            .replace('BNK','').replace('Sh','').replace('IBK','').replace('SC제일','SC');
 }
 
+function renderRegBank(body){
+  body.innerHTML='';
+
+  // 은행별 전국 지점 집계 (PROV에서 역산)
+  const bankTotals={};
+  const bankByProv={};  // bank → prov key → count
+  Object.entries(PROV).forEach(([pk,pd])=>{
+    Object.entries(pd.by_bank||{}).forEach(([bk,cnt])=>{
+      bankTotals[bk]=(bankTotals[bk]||0)+cnt;
+      if(!bankByProv[bk]) bankByProv[bk]={};
+      bankByProv[bk][pk]=(bankByProv[bk][pk]||0)+cnt;
+    });
+  });
+
+  // 주요 은행 (100지점 이상) 내림차순
+  const banks=Object.entries(bankTotals)
+    .filter(([,n])=>n>=50)
+    .sort((a,b)=>b[1]-a[1])
+    .map(([b])=>b);
+
+  if(!regSelBank||!bankTotals[regSelBank]) regSelBank=banks[0];
+
+  // 은행 선택 버튼
+  const btnWrap=document.createElement('div');
+  btnWrap.style.cssText='padding:10px 14px 4px;display:flex;flex-wrap:wrap;gap:6px;';
+  banks.forEach(bk=>{
+    const col=COLORS[bk]||'#888';
+    const btn=document.createElement('button');
+    btn.className='tbtn';
+    btn.style.cssText=`border:1.5px solid ${bk===regSelBank?col:'var(--border)'};color:${bk===regSelBank?col:'var(--t2)'};background:${bk===regSelBank?col+'18':'transparent'};font-size:11.5px;padding:4px 10px;border-radius:12px;cursor:pointer;`;
+    btn.textContent=bankShortLabel(bk);
+    btn.addEventListener('click',()=>{regSelBank=bk;renderRegBank(body);});
+    btnWrap.appendChild(btn);
+  });
+  body.appendChild(btnWrap);
+
+  // 선택 은행 지역별 비중 바차트
+  const sel=regSelBank;
+  const selCol=COLORS[sel]||'#888';
+  const total=bankTotals[sel];
+  const provList=Object.entries(bankByProv[sel]||{})
+    .map(([pk,cnt])=>{
+      const pd=PROV[pk];
+      return{pk, name:pd?pd.name:pk, cnt, pct:cnt/total*100};
+    })
+    .sort((a,b)=>b.cnt-a.cnt);
+
+  const sec=document.createElement('div');sec.className='ana-sec';
+  sec.innerHTML=`<div class="sec-ttl">${sel} — 전국 ${total.toLocaleString()}개 지점의 지역별 분포</div>`;
+
+  provList.forEach(r=>{
+    const row=document.createElement('div');row.className='rbar-row';
+    row.innerHTML=`
+      <span class="rbar-name" style="width:72px;font-size:11px">${r.name}</span>
+      <div class="rbar-track"><div class="rbar-fill" style="width:${r.pct.toFixed(1)}%;background:${selCol}"></div></div>
+      <span class="rbar-val" style="color:${selCol};width:38px">${r.pct.toFixed(1)}%</span>
+      <span class="rbar-sub" style="font-size:10px;color:var(--t3)">${r.cnt}개</span>`;
+    sec.appendChild(row);
+  });
+  body.appendChild(sec);
+
+  // 상위 3개 지역 요약 팁
+  const top3=provList.slice(0,3);
+  const tip=document.createElement('div');tip.className='gg-tip';tip.style.marginTop='8px';
+  tip.innerHTML=`<strong>${sel}</strong> 지점의 <strong>${top3.map(r=>`${r.name} ${r.pct.toFixed(0)}%`).join(' · ')}</strong> 집중 (상위 3개 지역 합계 ${top3.reduce((s,r)=>s+r.pct,0).toFixed(0)}%)`;
+  body.appendChild(tip);
+}
+
 function renderReg(){
   const body=document.getElementById('reg-body');
   if(!body)return;
+  if(regTab==='bank'){renderRegBank(body);return;}
   body.innerHTML='';
 
   const entries=Object.entries(PROV).map(([key,d])=>{
