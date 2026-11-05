@@ -17,8 +17,6 @@ except ImportError:
 SOURCES = [
     {"key": "yna",      "name": "연합뉴스",   "cls": "yna",
      "url": "https://www.yna.co.kr/rss/economy.xml"},
-    {"key": "yna",      "name": "연합뉴스",   "cls": "yna",
-     "url": "https://www.yna.co.kr/rss/finance.xml"},
     {"key": "mk",       "name": "매일경제",   "cls": "mk",
      "url": "https://www.mk.co.kr/rss/40300001/"},
     {"key": "mk",       "name": "매일경제",   "cls": "mk",
@@ -27,10 +25,8 @@ SOURCES = [
      "url": "https://www.hankyung.com/feed/economy"},
     {"key": "hankyung", "name": "한국경제",   "cls": "hankyung",
      "url": "https://www.hankyung.com/feed/finance"},
-    {"key": "newsis",   "name": "뉴시스",     "cls": "newsis",
-     "url": "https://www.newsis.com/RSS/economy/"},
-    {"key": "mt",       "name": "머니투데이", "cls": "mt",
-     "url": "https://news.mt.co.kr/newArticleRSS.html?pCategory=A01"},
+    {"key": "edaily",   "name": "이데일리",   "cls": "mk",
+     "url": "https://www.edaily.co.kr/rss/economy.xml"},
 ]
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; news-fetcher/1.0)"}
@@ -81,7 +77,13 @@ for src in SOURCES:
     time.sleep(0.3)
 
 # 중복 링크 먼저 제거
-seen, raw = set(), [a for a in raw if not (a["link"] in seen or seen.add(a["link"]))]
+seen = set()
+deduped = []
+for a in raw:
+    if a["link"] not in seen:
+        seen.add(a["link"])
+        deduped.append(a)
+raw = deduped
 
 # 오늘치 우선, 50건 미만이면 어제 기사도 포함
 today     = datetime.now(KST).date()
