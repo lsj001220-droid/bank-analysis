@@ -279,12 +279,38 @@ html,body{height:100%;font-family:'Noto Sans KR',sans-serif;background:var(--bg)
 .prov.selected{fill:var(--accent);opacity:.85;stroke:var(--accent);stroke-width:1.5;}
 
 @media(max-width:600px){
+  /* nav → 하단 탭바 */
+  #app{flex-direction:column;}
+  #nav{
+    width:100%;height:54px;flex-direction:row;order:2;
+    padding:0 max(4px,env(safe-area-inset-left,0px))
+            max(4px,env(safe-area-inset-bottom,0px));
+    border-right:none;border-top:1px solid var(--border);
+    gap:2px;overflow-x:auto;justify-content:space-around;
+    flex-shrink:0;
+  }
+  .nav-logo{display:none;}
+  .nav-btn{width:44px;height:44px;flex-shrink:0;}
+  #pages{order:1;height:calc(100% - 54px);}
+  /* 지도 */
   #mpanel.open{width:100%;position:absolute;inset:0;z-index:100;}
   #prov-panel{width:calc(100% - 24px);right:12px;}
+  /* 탭 버튼 행 */
+  .tab-row{overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px;}
+  .tab-btn{flex-shrink:0;}
+  /* 취준분석 */
   .ana-body{padding:12px;}
+  .ana-header{padding:10px 12px;gap:10px;}
   .rec-grid{grid-template-columns:1fr 1fr;}
   .rbar-name{width:68px;font-size:11px;}
   .rbar-sub{display:none;}
+  /* heatmap/표 가로스크롤 */
+  .hmap-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .gg-major-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  /* 지역별 현황 */
+  .reg-grid{grid-template-columns:1fr 1fr;padding:10px;gap:8px;}
+  /* 채용TO */
+  .to-26-grid{grid-template-columns:repeat(2,1fr)!important;}
 }
 </style>
 </head>
@@ -593,11 +619,11 @@ gMap.selectAll('path')
 svg.on('pointerup',function(e){
   if(e.target===this||e.target.nodeName==='svg')closeProvPanel();
 });
-// zoom 필터: path(도 경계)/circle(지점 마커) 위에서는 zoom 비활성
-// → pointerdown.preventDefault() 미호출 → click 이벤트 정상 발화
+// zoom 필터: 터치는 항상 허용(모바일 팬/핀치), 마우스는 g/svg에서만
 const zB=d3.zoom()
   .filter(e=>{
     if(e.type==='wheel') return true;
+    if(e.pointerType==='touch') return true;
     if(e.button!==0) return false;
     const tn=e.target.nodeName;
     return tn==='g'||tn==='svg';
