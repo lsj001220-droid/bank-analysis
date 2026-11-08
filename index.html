@@ -294,6 +294,7 @@ html,body{height:100%;font-family:'Noto Sans KR',sans-serif;background:var(--bg)
   #pages{order:1;height:calc(100% - 54px);}
   /* 지도 */
   #mpanel.open{width:100%;position:absolute;inset:0;z-index:100;}
+  #mpanel-topbar{display:flex!important;}
   #prov-panel{width:calc(100% - 24px);right:12px;}
   /* 탭 버튼 행 */
   .tab-row{overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px;}
@@ -412,6 +413,10 @@ html,body{height:100%;font-family:'Noto Sans KR',sans-serif;background:var(--bg)
       </div>
     </div>
     <div id="mpanel">
+      <div id="mpanel-topbar" style="display:none;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--border);flex-shrink:0">
+        <span style="font-size:13px;font-weight:700">통계 / 필터</span>
+        <button class="tbtn" onclick="toggleMapPanel()" style="padding:4px 12px">✕ 닫기</button>
+      </div>
       <div class="ps">
         <div class="plbl">요약 통계</div>
         <div class="sg">
