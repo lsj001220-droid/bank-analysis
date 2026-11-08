@@ -1,7 +1,25 @@
 {
-  "updated": "2026-11-08T09:19:46Z",
+  "updated": "2026-11-08T16:10:16Z",
   "count": 75,
   "articles": [
+    {
+      "title": "與 \"정부에 '실거주 구분 없이 종부세 공제 14억' 강력히 요구\"(종합)",
+      "link": "https://www.yna.co.kr/view/AKR20261108048252001",
+      "desc": "(서울=연합뉴스) 박경준 안정훈 황윤기 기자 = 더불어민주당은 8일 종합부동산세(종부세) 기본공제 기준선을 실거주 여부와 관계 없이 주택 가액 ...",
+      "pub": "Sun, 8 Nov 2026 21:24:39 +0900",
+      "src": "yna",
+      "srcName": "연합뉴스",
+      "cls": "yna"
+    },
+    {
+      "title": "與 \"정부에 '실거주 구분 없이 종부세 공제 14억' 강력히 요구\"",
+      "link": "https://www.yna.co.kr/view/AKR20261108048251001",
+      "desc": "(서울=연합뉴스) 박경준 안정훈 기자 = 더불어민주당은 8일 종합부동산세(종부세) 기본공제 기준선을 실거주 여부와 관계 없이 주택 가액 14억원...",
+      "pub": "Sun, 8 Nov 2026 19:50:12 +0900",
+      "src": "yna",
+      "srcName": "연합뉴스",
+      "cls": "yna"
+    },
     {
       "title": "LH \"공공이 개발사업 시행하면 속도 빨라지고 부정부패 줄어\"",
       "link": "https://www.yna.co.kr/view/AKR20261108031800003",
@@ -255,427 +273,409 @@
       "cls": "yna"
     },
     {
-      "title": "오세훈 \"국민연금으로 지방선거용 주식도박…李대통령 사과해야\"",
-      "link": "https://www.yna.co.kr/view/AKR20261108016700004",
-      "desc": "(서울=연합뉴스) 김동규 기자 = 오세훈 서울시장은 최근 주식시장 급락과 관련해 8일 &quot;정부가 국민연금을 종잣돈 삼아 판을 키우고, 고위험 레버...",
-      "pub": "Sun, 8 Nov 2026 10:16:24 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "울주군 내년 장애인일자리사업 참여자 모집…18세 이상 미취업자",
-      "link": "https://www.yna.co.kr/view/AKR20261106065600057",
-      "desc": "(울산=연합뉴스) 장영은 기자 = 울산 울주군은 장애인 사회참여 확대와 소득보장 지원을 위해 오는 13일까지 &apos;2027년 장애인일자리사업&apos; 참여...",
-      "pub": "Sun, 8 Nov 2026 10:10:01 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "\"내일 잘려도 된다는 생각으로 49년 일해…할말 다해 후회 없다\"",
-      "link": "https://www.hankyung.com/article/2026110831801",
+      "title": "\"창구 출금만 됩니다\"…불편해도 돈 숨기는 직장인들",
+      "link": "https://www.hankyung.com/article/202611082882i",
       "desc": "",
-      "pub": "Sun, 08 Nov 2026 17:23:53 +0900",
+      "pub": "Sun, 08 Nov 2026 23:24:13 +0900",
       "src": "hankyung",
       "srcName": "한국경제",
       "cls": "hankyung"
     },
     {
-      "title": "\"韓 제조업, 이미 상당 부분 경쟁력 잃어…이대로 가면 반도체도 위험\"",
-      "link": "https://www.hankyung.com/article/2026110831791",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 17:22:26 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "\"역대 최대 벤처펀드 추진…세계 선도기업에 투자\"",
-      "link": "https://www.hankyung.com/article/2026110831551",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 17:08:10 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "[단독] 카뱅·토뱅도 '애플페이' 도입…'현대카드 독점' 3년 만에 깨진다",
-      "link": "https://www.hankyung.com/article/202611069696i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 17:00:03 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "\"팝업만 답 아냐\"…마마무 솔라, 백화점 앞 무대서 신곡 부른 이유",
-      "link": "https://www.hankyung.com/article/202611083099g",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 16:07:40 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "증시 폭락에 떠오르는 손실의 악몽…당신의 기억은 틀렸다",
-      "link": "https://www.hankyung.com/article/202611058459i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 16:01:02 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "급락한 美 증시, 내년 운명은 AI 산업·국채금리에 달렸다",
-      "link": "https://www.hankyung.com/article/202611046456i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 15:29:02 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "\"AI 투자 시험대는 2028년\"...센터장이 보는 반도체 미래는?",
-      "link": "https://www.hankyung.com/article/202611082969i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 15:26:07 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "녹색 전환 시급한데…기업 절반 이상 '전기화' 추진 계획없어",
-      "link": "https://www.hankyung.com/article/202611083039i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 15:19:05 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "내일부터 반대매매 일단 '숨통'…증권사 담보비율 140% 의무 3개월 면제",
-      "link": "https://www.hankyung.com/article/2026110830387",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 15:12:27 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "은행법학회 새 회장에 송창영 변호사",
-      "link": "https://www.hankyung.com/article/202611083036i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 15:08:03 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "이재용·정의선 '깐부회동' 1년 만에…'파격 이벤트' 열린다",
-      "link": "https://www.hankyung.com/article/202611083017g",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 15:07:16 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "삼성전자 용인 연수원에 현대차 임원들이…왜?",
-      "link": "https://www.hankyung.com/article/2026110830317",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 15:05:53 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "커지는 코스피 블루…\"5000선 밑은 '언더슈팅', 패닉셀 할 때 아니다\"",
-      "link": "https://www.hankyung.com/article/202611082842i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 14:07:00 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "AI 거품 공포에 흔들리는 美 증시…中, 물가·수출 성적표에 촉각",
-      "link": "https://www.hankyung.com/article/202611082964i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 14:03:59 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "50억 현금 부자, 주식 몰빵 대신 3년치 생활비 먼저 빼놨다",
-      "link": "https://www.hankyung.com/article/202611082655i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 14:00:03 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "\"비행기 가격 왜 이래\"…'역대급 엔저'에 실적 대박난 이 종목",
-      "link": "https://www.hankyung.com/article/202611082940i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 13:22:20 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "\"가족 사정\"…'젠슨 황 장녀' 방한 취소에 부총리 면담 불발",
-      "link": "https://www.hankyung.com/article/2026110829317",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 13:07:20 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "\"이러다 '5만전자' 가나\"…개미들 패닉 부른 '소문의 진실' [노정동의 어쩌다 투자자]",
-      "link": "https://www.hankyung.com/article/2026110606826",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 13:00:08 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "다가오는 퇴직연금 격변기, 내 퇴직금은 어떻게 달라질까",
-      "link": "https://www.hankyung.com/article/202611045203i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 13:00:02 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "\"쓰지 말래도 씁니다\"…정년퇴직자 재고용 1순위는 '숙련자'",
-      "link": "https://www.hankyung.com/article/202611082763i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 12:30:47 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "\"전 세계인 70%가 신라면 알아\"…바닷가 '라면의 심장'이 뛰기 시작했다",
-      "link": "https://www.hankyung.com/article/202611082771i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 12:00:01 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "‘우협 줄다리기’에 위기 맞은 KDB생명…‘인수자 북적’ 기대 품은 JTBC [M&A복덕방]",
-      "link": "https://www.mk.co.kr/news/stock/12201625",
-      "desc": "다음주 인수·합병(M&A) 시장에서는 우선협상대상자(우협) 기간 종료가 임박한 KDB생명과 매각 공고를 앞둔 JTBC가 관심을 끌 전망이다. 산은, 한투와 자본확충 평행선 언제까지..",
-      "pub": "Sun, 08 Nov 2026 11:31:06 +09:00",
+      "title": "“번 돈의 절반은 주주에 돌려줍니다”…4대 금융지주, 배당·자사주 소각 역대급",
+      "link": "https://www.mk.co.kr/news/economy/12201960",
+      "desc": "KB금융 55%·신한 52% 등  글로벌 메가뱅크 수준 육박  ESG·밸류업 전략 적극 강조 5년새 주주환원율 두배로↑  자본건전성 약화 우려는 과제KB·신한·하나·우리 등 국내 ..",
+      "pub": "Sun, 08 Nov 2026 22:25:25 +09:00",
       "src": "mk",
       "srcName": "매일경제",
       "cls": "mk"
     },
     {
-      "title": "\"외국인들 싹 쓸어가\"…불닭·신라면 제친 '이 라면' 일냈다 [박상경의 영수증 리뷰]",
-      "link": "https://www.hankyung.com/article/202611069940g",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 11:00:15 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "전세대출 갚았더니 세금 뚝…무주택 직장인 연말정산 전략",
-      "link": "https://www.hankyung.com/article/202611061553i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 11:00:13 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "외인 던질 때 471억 담았다…10억 자산가들이 급락장에 찍은 두 종목",
-      "link": "https://www.hankyung.com/article/202611082736i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 10:39:31 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "'국민 첫 차'라기엔 \"아깝다\"…확 달라진 아반떼 하이브리드 [신차털기]",
-      "link": "https://www.hankyung.com/article/202611069961g",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 10:30:01 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "고려아연 주식 94만원에 산 MBK, 콜옵션 행사하면 77만원…지분 추가 확보할까",
-      "link": "https://www.hankyung.com/article/202611082723g",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 10:14:42 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "\"SK하닉보다 심할 줄은\"…'474만→161만원' 곡소리 터졌다",
-      "link": "https://www.hankyung.com/article/2026110827497",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 10:06:06 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "바이낸스 해킹·美 '블루 쓰나미' 겹악재…비트코인도 '와르르'",
-      "link": "https://www.hankyung.com/article/202611061459i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 10:00:06 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "\"살 빼는 주사 맞으면 보험 가입안된다?\"…진실은 이렇다",
-      "link": "https://www.hankyung.com/article/202611060455i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 10:00:03 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "블루쓰나미 후폭풍…TIGER 미국S&P500, 국내 1위 ETF 등극",
-      "link": "https://www.hankyung.com/article/202611061620i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 09:35:52 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "'GTA6' 출시 앞두고 소니 주가 급등…PS6 개발 속도낸다",
-      "link": "https://www.hankyung.com/article/202611069908i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 09:00:02 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "“미국 물가부터 옵션 만기까지”…다음 주 증시 변수, 미리 대비하려면",
-      "link": "https://www.mk.co.kr/news/stock/12201573",
-      "desc": "미국 CPI 영향 ‘국채금리·환율’ 주목 코어위브 실적 발표…AI 투자 시험대 코스피200 옵션 만기, 수급 변수 될까미국 중간선거 이후 인공지능(AI) 투자 위축 우려에 급락한 ..",
-      "pub": "Sun, 08 Nov 2026 08:08:16 +09:00",
+      "title": "심장수술 잡아놔도 마취할 의사가 없다...멈춰버린 대학병원 세대교체",
+      "link": "https://www.mk.co.kr/news/it/12201959",
+      "desc": "68개 병원 중 전임의 지원 3곳  현역은 50대 이상 비중 높아 “응급·야간대기 별도 보상해야”심장수술 마취를 맡는 의사들이 고령화하는 가운데 뒤를 이을 인력도 부족한 것으로 나..",
+      "pub": "Sun, 08 Nov 2026 22:25:14 +09:00",
       "src": "mk",
       "srcName": "매일경제",
       "cls": "mk"
     },
     {
-      "title": "'블루 웨이브 쇼크'에 휘청인 코스피…반등 열쇠는 [주간전망]",
-      "link": "https://www.hankyung.com/article/2026110609346",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 08:00:05 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "금융자산 35억인데…60대 부부, 세금 줄이고 월 1200만원 쓰는 법",
-      "link": "https://www.hankyung.com/article/202611058584i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 08:00:02 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "고전 명작 표지까지…다이소 '미니키링북' 출시 전부터 관심",
-      "link": "https://www.hankyung.com/article/202611060500i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 07:59:05 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "\"누워서 볼래, 단둘이 볼래\"…7만원짜리 '불 꺼진 방' 동났다 [박수림의 요즘 여기]",
-      "link": "https://www.hankyung.com/article/202611060145g",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 07:30:03 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "출석 확인부터 통신장애까지, 전자주주총회 실무 점검사항 [디엘지 기업법무 핵심노트]",
-      "link": "https://www.hankyung.com/article/202611033040i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 07:00:07 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "\"떡볶이 먹고 산책까지\"…노포 분식집, 동네 관광 코스로 뜬다 [권용훈의 트렌드워치]",
-      "link": "https://www.hankyung.com/article/202611069903i",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 07:00:05 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "“주식 판 돈, 2028년부터 다음날 찾는다는데”…개미들 주의할 ‘이것’",
-      "link": "https://www.mk.co.kr/news/stock/12201558",
-      "desc": "54년 만에 주식 결제주기 이틀서 하루로 단축 미수거래 대금도 하루 빨리 내야…반대매매 주의주식을 팔고도 이틀을 기다려야 돈을 찾을 수 있었던 불편이 이르면 2028년부터 사라진다..",
-      "pub": "Sun, 08 Nov 2026 06:13:56 +09:00",
+      "title": "“여자친구 살해했다” 직접 신고한 20대 남성…청주 아파트서 무슨 일이",
+      "link": "https://www.mk.co.kr/news/society/12201958",
+      "desc": "충북 청주의 한 아파트에서 20대 여성이 남자친구가 휘두른 흉기에 찔려 숨지는 사건이 발생했다. 청주청원경찰서는 8일 여자친구에게 흉기를 휘둘러 살해한 혐의(살인)로 20대 A씨를..",
+      "pub": "Sun, 08 Nov 2026 21:48:47 +09:00",
       "src": "mk",
       "srcName": "매일경제",
       "cls": "mk"
     },
     {
-      "title": "\"집에 있으면 돈 아끼는 줄 알았는데\"…'소파 경제'의 함정",
-      "link": "https://www.hankyung.com/article/202611072412H",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 06:00:03 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "\"주주는 피눈물인데 직원은 7억?\"…삼성 성과급 놓고 갑론을박",
-      "link": "https://www.hankyung.com/article/202611072406H",
-      "desc": "",
-      "pub": "Sun, 08 Nov 2026 06:00:01 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "이 정도면 도박보다 심하네…하루만에 40% 급락한 속슬, 서학개미 어쩌나",
-      "link": "https://www.mk.co.kr/news/stock/12201537",
-      "desc": "美반도체지수 7개월來 최저치 반도체x3 속슬, 5일 40% 폭락 기술주 추종 ETF서 대거 떨어져뉴욕증시에서 반도체 지수가 7개월 만에 최저치를 찍은 가운데 미 증시에 상장한 레버..",
-      "pub": "Sat, 07 Nov 2026 21:32:04 +09:00",
+      "title": "의사 사망에 법까지 만들었는데…여전히 진료실에 흉기 들고 들어온다",
+      "link": "https://www.mk.co.kr/news/society/12201955",
+      "desc": "작년 폭행사건 되레 5% 증가 ‘반의사불법’ 폐지 목소리 커져의료기관 내 폭력범죄가 잇따르면서 의료인 폭행에 대한 반의사불벌죄 폐지 등 제도적 보완이 필요하다는 목소리가 커지고 있..",
+      "pub": "Sun, 08 Nov 2026 21:24:14 +09:00",
       "src": "mk",
       "srcName": "매일경제",
       "cls": "mk"
     },
     {
-      "title": "“코스피에 정말 질렸다”…실망한 개미들 일주일 새 2조 5000억 쓸어담은 ‘이것’",
-      "link": "https://www.mk.co.kr/news/economy/12201494",
-      "desc": "국내 증시가 지지부진한 흐름을 이어가다 급락 장세를 연출하자, 실망한 개인 투자자들이 발길을 돌려 미국 주식 사냥에 대거 나섰다. 불과 닷새 만에 한 달 치에 맞먹는 자금을 미국 ..",
-      "pub": "Sat, 07 Nov 2026 18:02:27 +09:00",
+      "title": "“아파트 욕심 조금만 미루자 했는데”…서울 빌라 전월세 물량 역대 최소",
+      "link": "https://www.mk.co.kr/news/realestate/12201950",
+      "desc": "내년 1분기 전월세 2만건 밑 빌라 통계 집계 이래 최저 전세사기 여파 신규공급 부진 전월세값 오르며 서민 부담만내년 1분기 서울에서 전월세 시장에 나올 빌라(연립·다세대주택) 물..",
+      "pub": "Sun, 08 Nov 2026 20:58:24 +09:00",
       "src": "mk",
       "srcName": "매일경제",
       "cls": "mk"
+    },
+    {
+      "title": "“개미들은 이번 월요일만 기다립니다”…일단 美 반도체는 회복 성공",
+      "link": "https://www.mk.co.kr/news/stock/12201946",
+      "desc": "저가 매수에 급락 진정세 AMD 11%·인텔 7% 급상승 헤지펀드발 기술주 과매도 일부 해소되며 수급여건 개선 10일 코어위브 실적이 관건블루쓰나미 파장이 잦아들며 6일(현지시간)..",
+      "pub": "Sun, 08 Nov 2026 20:06:04 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "\"비자·마스터카드서 수수료 독립\"…한국형 '터치 결제' 나온다",
+      "link": "https://www.hankyung.com/article/2026110833851",
+      "desc": "",
+      "pub": "Sun, 08 Nov 2026 19:54:30 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "카뱅·토뱅도 애플페이 … 현대카드 독점 깨진다",
+      "link": "https://www.mk.co.kr/news/economy/12201942",
+      "desc": "이르면 이달 애플페이에 카카오뱅크와 토스뱅크 체크카드 등록이 가능해질 전망이다. 그동안 국내에서 애플페이를 이용하려면 현대카드를 발급받아야 했는데 이러한 독점 구조가 3년여 만에 ..",
+      "pub": "Sun, 08 Nov 2026 19:49:14 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "서울대 총장 최종후보에 최해천 기계공학부 교수",
+      "link": "https://www.mk.co.kr/news/society/12201936",
+      "desc": "서울대 차기 총장에 최해천 서울대 공대 기계공학부 석좌교수(사진)가 선출됐다. 공과대학 출신 총장이 탄생하는 것은 2006년 제24대 이장무 총장 이후 20년 만이다.\n8일 서울대..",
+      "pub": "Sun, 08 Nov 2026 19:28:47 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "'코스피 대탈출' 경고음…8조 던진 외국인 심상치 않다",
+      "link": "https://www.hankyung.com/article/2026110833407",
+      "desc": "",
+      "pub": "Sun, 08 Nov 2026 19:23:56 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "‘1만피’ 간다더니 이제와 ‘5천피’라고?…황당한 증권사 고무줄 전망",
+      "link": "https://www.mk.co.kr/news/stock/12201928",
+      "desc": "증권시장 불안에 코스피도 급락을 거듭하는 모양새다. 증권가도 좀처럼 갈피를 잡지 못하고 목표치를 상승장에서 높이고 하락장에서 낮추는 ‘뒷북 전망’을 반복적으로 내놓고 있다. 증권가..",
+      "pub": "Sun, 08 Nov 2026 18:49:55 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "\"투자보다 생존\" 월급 줄 돈 빌리는 기업 급증",
+      "link": "https://www.hankyung.com/article/2026110832801",
+      "desc": "",
+      "pub": "Sun, 08 Nov 2026 18:16:28 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "티어니 르루 IDA 부문장 \"데이터센터 유치 前 산업기반부터 갖춰야\"",
+      "link": "https://www.hankyung.com/article/2026110832831",
+      "desc": "",
+      "pub": "Sun, 08 Nov 2026 18:15:53 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "삼성전자, 보유 현금 200조원 첫 돌파",
+      "link": "https://www.hankyung.com/article/2026110833367",
+      "desc": "",
+      "pub": "Sun, 08 Nov 2026 18:14:23 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "앱으로 태양광 투자…개인 투자자만 2만명",
+      "link": "https://www.hankyung.com/article/2026110832591",
+      "desc": "",
+      "pub": "Sun, 08 Nov 2026 18:12:11 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "中企 일터 혁신 컨설팅…노란봉투법 해법 찾는다",
+      "link": "https://www.hankyung.com/article/2026110832601",
+      "desc": "",
+      "pub": "Sun, 08 Nov 2026 18:11:14 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "피부과 화장품 노린 해외 자본…2000억원에 메디안스 인수",
+      "link": "https://www.hankyung.com/article/2026110832611",
+      "desc": "",
+      "pub": "Sun, 08 Nov 2026 18:10:53 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "농심, 라면 年 62억개씩 글로벌로 쏜다",
+      "link": "https://www.hankyung.com/article/2026110832661",
+      "desc": "",
+      "pub": "Sun, 08 Nov 2026 18:10:06 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "“고점서 60% 빠졌는데 당연히 사야죠”...삼전닉스 지금 매수하라는 노익장",
+      "link": "https://www.mk.co.kr/news/stock/12201921",
+      "desc": "투자 구루 강방찬 에셋플러스운용 설립자  “좋은 주식은 쌀 때 담아야” 中메모리 추격 등 변수 있어도 자율차·로봇산업 등 본격화땐 CPU·DDR 글로벌 수요 폭증 다시 한번 메모리..",
+      "pub": "Sun, 08 Nov 2026 18:04:47 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "“어떻게 다니라고 이 모양?”…인도서 불만 폭발 ‘최악의 보도블록’",
+      "link": "https://www.mk.co.kr/news/world/12201920",
+      "desc": "인도에 새롭게 설치된 친환경 보도블록이 안전성 논란에 휘말렸다. 빗물 배수와 수질 개선이라는 취지와 달리 큼직한 구멍이 사고를 유발하는 위험 요소로 지목돼 온라인상에서 논쟁이 벌어..",
+      "pub": "Sun, 08 Nov 2026 18:04:20 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "[속보] 서울대 총장 최종후보자에 최해천 기계공학부 석좌교수",
+      "link": "https://www.mk.co.kr/news/society/12201919",
+      "desc": "최해천(64) 서울대 기계공학부 교수가 8일 서울대 차기 총장 최종 후보로 선출됐다. 신임 총장은 교육부 장관의 제청을 거쳐 대통령이 임명한다. 임기는 내년 2월 1일부터 4년이다..",
+      "pub": "Sun, 08 Nov 2026 18:03:59 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "서울대 차기 총장에 최해천…임기 내년 2월부터",
+      "link": "https://www.mk.co.kr/news/society/12201918",
+      "desc": "이사회, 각 후보 면접 후 투표 최해천 교수, 이사회 과반 얻어 20년만에 공대 출신 총장 선임  AI, 재정 확충 관련 공약 관심 대통령 임명 거쳐 내년 2월 취임서울대 차기 총..",
+      "pub": "Sun, 08 Nov 2026 18:02:59 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "카카오뱅크, 자선 마라톤 기부금 전달",
+      "link": "https://www.hankyung.com/article/2026110832251",
+      "desc": "",
+      "pub": "Sun, 08 Nov 2026 17:55:59 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "우리은행, 대한천일은행 학술대회…韓전통 복식부기 회계장부 주목",
+      "link": "https://www.hankyung.com/article/2026110832261",
+      "desc": "",
+      "pub": "Sun, 08 Nov 2026 17:55:42 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "평사원서 회장까지 올랐다…14번 승진한 '월급쟁이 신화'",
+      "link": "https://www.hankyung.com/article/2026110833151",
+      "desc": "",
+      "pub": "Sun, 08 Nov 2026 17:54:42 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "\"이러다 전기 다 빨린다\"…국가전력 30% 먹는 '흡혈귀' 정체",
+      "link": "https://www.hankyung.com/article/2026110832841",
+      "desc": "",
+      "pub": "Sun, 08 Nov 2026 17:53:01 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "'反데이터센터'의 역습…AI 판 흔든다",
+      "link": "https://www.hankyung.com/article/2026110833141",
+      "desc": "",
+      "pub": "Sun, 08 Nov 2026 17:51:13 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "4인가구 소득 2억이라고?…'부자 한국' 속 서민의 한숨",
+      "link": "https://www.hankyung.com/article/2026110832811",
+      "desc": "",
+      "pub": "Sun, 08 Nov 2026 17:48:25 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "경제지표와 체감경기 괴리 '사상 최대'",
+      "link": "https://www.hankyung.com/article/2026110833121",
+      "desc": "",
+      "pub": "Sun, 08 Nov 2026 17:46:50 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "[단독] 강북삼성병원, 삼성 재단 떠나 성균관대로…‘의대 부속병원’ 전환 추진",
+      "link": "https://www.mk.co.kr/news/it/12201916",
+      "desc": "의대 부속병원으로 전환 추진 내년 하반기 이관 마무리 목표 기초연구·임상 유기적 연계 퇴직금 사학연금 전환은 쟁점  삼성창원병원도 2010년 전환 삼성그룹 부담 덜고 자율 보장강북..",
+      "pub": "Sun, 08 Nov 2026 17:46:30 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "밀러 \"트럼프 위해 싸워야\"… 美민주 \"악성종양\"",
+      "link": "https://www.mk.co.kr/news/world/12201911",
+      "desc": "도널드 트럼프 미국 대통령이 수지 와일스 백악관 비서실장의 후임으로 스티븐 밀러 백악관 부비서실장을 선택한 것은 중간선거로 상·하원을 모두 민주당에 내어준 상태에서도 '마이웨이'를..",
+      "pub": "Sun, 08 Nov 2026 17:43:52 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "\"우리가 K-팰런티어\"… 뜨거운 국방 AX 3파전",
+      "link": "https://www.mk.co.kr/news/business/12201907",
+      "desc": "네이버·카카오·엔씨를 비롯한 국내 대표 정보기술(IT) 회사가 국방 인공지능 전환(AX)에 드라이브를 걸고 있다. 각자 본업에서 쌓인 핵심 역량을 기반으로 국방 인공지능(AI)에 ..",
+      "pub": "Sun, 08 Nov 2026 17:43:45 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "美 규제 멈칫하자 … 中, 선박수주 77% 독식",
+      "link": "https://www.mk.co.kr/news/business/12201904",
+      "desc": "올해 10월까지 세계 선박 발주량 가운데 중국이 76.6%를 독식한 것으로 나타났다. 한국은 14.9%에 그쳤다. 미국이 중국 조선업을 견제하기 위해 도입한 입항수수료의 부과 재개..",
+      "pub": "Sun, 08 Nov 2026 17:42:35 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "LG전자, 車 통신제어 모듈 세계 첫 안전 최고등급 획득",
+      "link": "https://www.mk.co.kr/news/business/12201905",
+      "desc": "LG전자가 글로벌 인증기관 'TUV 라인란드'로부터 차량 통신제어 모듈 자동차 기능안전 국제표준 ISO 26262의 최고 등급 'ASIL D' 인증을 획득했다고 8일 밝혔다. 해당..",
+      "pub": "Sun, 08 Nov 2026 17:42:35 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "韓아성 메모리 산업에…TSMC 재진출 정황",
+      "link": "https://www.mk.co.kr/news/business/12201902",
+      "desc": "로직 반도체를 주력으로 하는 TSMC가 메모리 반도체를 연구하는 것을 넘어 제조 검토에 나선 것은 인공지능(AI) 시대에 메모리의 역할이 중요해졌기 때문이다. \n반도체 업계에서는 ..",
+      "pub": "Sun, 08 Nov 2026 17:42:34 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "TSMC, 메모리 제조 움직임 … 삼전닉스 촉각",
+      "link": "https://www.mk.co.kr/news/business/12201899",
+      "desc": "세계 최대 파운드리 기업인 TSMC가 고객사인 엔비디아의 요청에 따라 차세대 메모리 반도체를 직접 제조하는 계획을 세우는 정황이 포착됐다. \nTSMC가 양산에 돌입한다면 26년 만..",
+      "pub": "Sun, 08 Nov 2026 17:41:58 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "중간선거 참패에도 트럼프 '마이웨이'",
+      "link": "https://www.mk.co.kr/news/world/12201895",
+      "desc": "도널드 트럼프 미국 대통령이 중간선거 참패 사흘 만에 신임 백악관 비서실장에 '강경파'로 분류되는 스티븐 밀러 부비서실장을 임명했다. \n중간선거 패배에도 트럼프 대통령이 강경파 최..",
+      "pub": "Sun, 08 Nov 2026 17:41:56 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "[단독] 국세청 \"직원 검진비에 과세\"… 기업들 혼란",
+      "link": "https://www.mk.co.kr/news/economy/12201896",
+      "desc": "회사가 직원에게 지원한 건강검진비를 근로자의 소득으로 볼지에 대해 국세청과 삼성그룹 계열사 간 의견이 엇갈리며 법정 다툼으로 번졌다. \n국세청이 회사가 직원에게 지원한 건강검진비 ..",
+      "pub": "Sun, 08 Nov 2026 17:41:56 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "\"AI 전면 규제는 비현실적…코스피 5000서 바닥 테스트\"",
+      "link": "https://www.hankyung.com/article/2026110832381",
+      "desc": "",
+      "pub": "Sun, 08 Nov 2026 17:41:53 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "\"C 받으면 인생 실패\"… 망한 학점 지우는 대학생들",
+      "link": "https://www.mk.co.kr/news/society/12201892",
+      "desc": "\"실패나 방황이 평생 성적표의 주홍글씨로 남지 않는다는 확신이 필요해요.\"\n'학점 지우개'로 불리는 학점포기제가 대학가에 다시 등장했다. 재수강이 같은 수업을 듣고 성적을 새로 받..",
+      "pub": "Sun, 08 Nov 2026 17:41:35 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "[알립니다] 제3회 AI 영상광고 대상",
+      "link": "https://www.mk.co.kr/news/notice/12201890",
+      "desc": "매경미디어가 개최하는 '제3회 대한민국 AI 영상광고 대상' 참가 작품을 모집합니다.\n참가 희망자는 14개 브랜드가 제시한 광고 과제를 보고 원하는 브랜드를 고른 뒤 인공지능(AI..",
+      "pub": "Sun, 08 Nov 2026 17:41:34 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "\"첫 직장이 미래 좌우하는 사회 … 청년세대 실패 부담 키워\"",
+      "link": "https://www.mk.co.kr/news/society/12201891",
+      "desc": "청년들이 학점포기제를 선호하는 이유로 경쟁 사회에 대한 불안감과 함께 실패에 대한 심리적 부담이 꼽힌다. 실패 시 재도전이 어렵다는 인식도 타 세대보다 높은 것으로 나타났다.\n카이..",
+      "pub": "Sun, 08 Nov 2026 17:41:34 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "신규택지 발표했지만 … 지자체들은 \"임대주택 비율 줄여달라\"",
+      "link": "https://www.mk.co.kr/news/realestate/12201888",
+      "desc": "정부가 수도권에 새로 조성하는 공공택지 6곳의 관할 지방자치단체들이 일제히 임대주택 비율을 최소화해 달라고 요구한 것으로 파악됐다. 주택을 공급해야 할 지자체들이 임대 비중 축소를..",
+      "pub": "Sun, 08 Nov 2026 17:41:28 +09:00",
+      "src": "mk",
+      "srcName": "매일경제",
+      "cls": "mk"
+    },
+    {
+      "title": "\"삼전닉스 PER 2배 불과…이익 감소 감안해도 저평가\"",
+      "link": "https://www.hankyung.com/article/2026110832391",
+      "desc": "",
+      "pub": "Sun, 08 Nov 2026 17:39:56 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
     }
   ]
 }
