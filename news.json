@@ -1,681 +1,681 @@
 {
-  "updated": "2026-11-25T02:56:15Z",
+  "updated": "2026-11-25T12:11:31Z",
   "count": 75,
   "articles": [
     {
-      "title": "“시험 부정행위 색출”…동서발전 사내창업기업, 인공지능 기반 부정행위 탐지 기술 개발",
-      "link": "https://www.mk.co.kr/news/business/12217968",
-      "desc": "무인비행장치 전파탐지 기술로  스마트안경·초소형 무선 카메라 색출한국동서발전 사내창업기업이 무인비행장치 전파탐지 기술로 스마트안경·초소형 무선 카메라를 색출하는 인공지능(AI) 기..",
-      "pub": "Wed, 25 Nov 2026 11:54:29 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "동그라미재단 ‘AI 아카데미 7기’ 125명 수료",
-      "link": "https://www.mk.co.kr/news/society/12217963",
-      "desc": "코딩 경험 없는 웹페이지 구현부터 창업 기획·재무 분석까지 실습 4주 교육 마무리 후 수료생 커뮤니티·네트워킹 시간 마련비영리 공익법인 동그라미재단(이사장 장순흥)은 지난 11월 ..",
-      "pub": "Wed, 25 Nov 2026 11:49:19 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "씨티은행, 삼성물산 해외 자금관리에 블록체인 기술 지원",
-      "link": "https://www.yna.co.kr/view/AKR20261125090400002",
-      "desc": "(서울=연합뉴스) 이도흔 기자 = 한국씨티은행은 블록체인 기술 기반의 차세대 결제·자금 관리 솔루션인 &apos;씨티 토큰 서비스&apos;를 삼성물산[02826...",
-      "pub": "Wed, 25 Nov 2026 11:49:03 +0900",
+      "title": "서울시·국토부, 정비사업 규제완화 놓고 '장외 공방'(종합)",
+      "link": "https://www.yna.co.kr/view/AKR20261125122851003",
+      "desc": "(서울=연합뉴스) 임기창 김동규 기자 = 오세훈 서울시장이 주택 공급 확대를 위해 정부에 정비사업 관련 규제 완화를 요구한 것을 두고 서울시와 ...",
+      "pub": "Wed, 25 Nov 2026 21:02:34 +0900",
       "src": "yna",
       "srcName": "연합뉴스",
       "cls": "yna"
     },
     {
-      "title": "해외여행 부담스럽네…고물가에 눈 돌린 겨울 호캉스, 뭐가 있길래",
-      "link": "https://www.mk.co.kr/news/culture/12217962",
-      "desc": "고유가·고물가에 국내 호캉스 상품 출시 인스파이어, 겨울 숙박 패키지 4종 운영 워터파크·테마파크 결합 가족 상품 마련 굴·전복·대게 등 제철 해산물 미식 강화고유가와 고물가로 해..",
-      "pub": "Wed, 25 Nov 2026 11:47:58 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "Korea’s biz sentiment weakens in November as exporters turn cautious",
-      "link": "https://www.mk.co.kr/news/english/12217961",
-      "desc": "Business sentiment in South Korea deteriorated in November after improving for a month, as confidenc..",
-      "pub": "Wed, 25 Nov 2026 11:47:47 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "갈길 바쁜 원전 공론화…첫 행사부터 찬반 토론 무산",
-      "link": "https://www.mk.co.kr/news/economy/12217960",
-      "desc": "확대 측 전문가 3명 참여 잠정 중단 중립위원이 기존 찬반 논거 소개 2050년까지 논의할지 놓고 이견 내달 시민 숙의토론 앞두고 난항제12차 전력수급기본계획(전기본)에 반영할 원..",
-      "pub": "Wed, 25 Nov 2026 11:47:35 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "민형배 전남광주시장 \"반도체 팹 건설인력 1만호 공공임대 필요\"",
-      "link": "https://www.yna.co.kr/view/AKR20261125083400054",
-      "desc": "(전남광주=연합뉴스) 장덕종 기자 = 전남광주통합특별시가 1만명 이상으로 추산되는 호남 반도체 클러스터 건설인력 유입에 대비해 정주 여건 마련에...",
-      "pub": "Wed, 25 Nov 2026 11:46:52 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "한전, 개인정보 유출 고객에 최대 1000만원 피해보상 보험 제공",
-      "link": "https://www.mk.co.kr/news/economy/12217959",
-      "desc": "한국전력이 개인정보 유출에 따른 2차 피해를 막기 위해 정보가 유출된 고객에게 최대 1000만원을 보상하는 금융사기 피해보험을 제공한다. 한전은 NICE평가정보의 개인정보 보호 서..",
-      "pub": "Wed, 25 Nov 2026 11:46:43 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "국고채 금리 대체로 하락…3년물 장중 연 3.633%",
-      "link": "https://www.yna.co.kr/view/AKR20261125090600008",
-      "desc": "(서울=연합뉴스) 25일 국고채 금리가 대체로 하락하고 있다.",
-      "pub": "Wed, 25 Nov 2026 11:40:57 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "PETRONAS expands LNG capacity with world’s first nearshore FLNG",
-      "link": "https://www.mk.co.kr/news/english/12217952",
-      "desc": "Malaysia’s state-owned energy company PETRONAS is seeking to expand its global liquefied natural gas..",
-      "pub": "Wed, 25 Nov 2026 11:40:36 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "손바닥으로 결제하고 AI 금융코치도…핀테크 3사 신기술 총출동",
-      "link": "https://www.yna.co.kr/view/AKR20261125073000017",
-      "desc": "(서울=연합뉴스) 한상용 기자 = 네이버페이와 카카오페이, 토스가 25일 개막한 &apos;코리아 핀테크 위크 2026&apos;에서 손바닥 인증 결제와 인공지능...",
-      "pub": "Wed, 25 Nov 2026 11:40:12 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "하루 2시간 자는 ‘쌍둥이맘’…발달지연 고민에 돌봄지원 호소까지 ‘극한육아’",
-      "link": "https://www.mk.co.kr/news/society/12217950",
-      "desc": "다태아 출산자의 과반이 조산으로 아이의 발달 지연을 고민하고 수면·휴식 부족을 호소한 것으로 나타났다. 고질적인 어려움으로는 신체·경제적 부담을 지목한 만큼 적기에 돌봄 지원이 이..",
-      "pub": "Wed, 25 Nov 2026 11:39:53 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "“조희대 탄핵, 대한민국 단단해지고 사법부 완벽해져”…與, 정당성 확보 주력",
-      "link": "https://www.mk.co.kr/news/politics/12217948",
-      "desc": "金, 5당 연대 제안…범여권 공조 추진 “조 대법원장 탄핵과 내란 완전 종식” “탄핵해도 대한민국 아무런 영향 없어” 법조계 반발에…정당성 거듭 강조조희대 대법원장 탄핵 추진을 둘..",
-      "pub": "Wed, 25 Nov 2026 11:38:19 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "美 과잉생산 관세 이르면 25일 발표…韓 15% 유지 예상",
-      "link": "https://www.mk.co.kr/news/world/12217944",
-      "desc": "미 언론, 中 고율 관세 가능성 韓·日·EU 15% 상한 전망 韓 디지털 규제 조사는 변수미국 무역대표부(USTR)가 이르면 24일(현지 시간) 저녁 한국 등 16개 국가·경제권을..",
-      "pub": "Wed, 25 Nov 2026 11:35:56 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "‘기획부터 운영까지 한 번에’ 다빈치커뮤니케이션, 중기중앙회장상 수상",
-      "link": "https://www.mk.co.kr/news/business/12217943",
-      "desc": "‘2026 대한민국 커뮤니케이션 대상’ 중소기업 대표 부문 선정  공공·기업 영상 제작에서 인공지능 미디어까지 영역 확대㈜다빈치커뮤니케이션(대표 황승헌)이 지난 24일 한국프레스센..",
-      "pub": "Wed, 25 Nov 2026 11:35:46 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "집값 떨어지는데 전세 ‘쑥’…강남 전세가율 1년 5개월 만에 최고",
-      "link": "https://www.mk.co.kr/news/economy/12217940",
-      "desc": "강남구 전세가율 지난해 6월 이후 ‘최고’ 도곡렉슬·대치팰리스 전셋값 고공행진 “정부 실거주 기조, 전월세난 가속 요인”서울 강남 지역에서 아파트 매매가격이 떨어지고 전세가격이 오..",
-      "pub": "Wed, 25 Nov 2026 11:34:53 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "증시는 급락하는데 보안株는 ‘불기둥’…해킹 공포에 나홀로 급등",
-      "link": "https://www.mk.co.kr/news/stock/12217941",
-      "desc": "국내외에서 해킹으로 인한 정보 유출 사고가 잇따르면서 국내 정보보안 관련주가 강세를 보이고 있다. 25일 한국거래소에 따르면 이날 오전 11시9분 현재 안랩은 전 거래일보다 17...",
-      "pub": "Wed, 25 Nov 2026 11:34:53 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "예금금리 4% 시대…‘조건 없이 받을 수 있는 금리’ 따로 있다는데",
-      "link": "https://www.mk.co.kr/news/economy/12217939",
-      "desc": "우대조건 없는 전북은행 정기예금 연 3.98% SC제일은행 최고 연 4.15%…우대금리 더하면 4%대 가입 한도도 상품별 차이…최대 10억원까지 예치 가능은행 정기예금 금리가 연 ..",
-      "pub": "Wed, 25 Nov 2026 11:34:12 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "李 대통령 “가정폭력, 피해자 원치 않아도 가해자 처벌…초안전사회로”",
-      "link": "https://www.mk.co.kr/news/politics/12217934",
-      "desc": "이재명 대통령이 25일 가정폭력 피해자가 처벌을 원하지 않더라도 가해자를 처벌할 수 있도록 관련 법 개정을 추진하겠다고 밝혔다. 가정폭력과 스토킹, 교제폭력 등 관계성 범죄가 잇따..",
-      "pub": "Wed, 25 Nov 2026 11:32:31 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "[인사] 삼성웰스토리",
-      "link": "https://www.yna.co.kr/view/AKR20261125086300030",
-      "desc": "◇ 부사장 승진",
-      "pub": "Wed, 25 Nov 2026 11:32:03 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "한신공영, 3분기 누적 영업이익 649억원…작년 대비 15%↑",
-      "link": "https://www.yna.co.kr/view/AKR20261125088200003",
-      "desc": "(서울=연합뉴스) 임기창 기자 = 한신공영은 연결 기준 올 3분기까지 누적 영업이익이 작년 동기 대비 14.9% 증가한 649억원으로 잠정 집계...",
-      "pub": "Wed, 25 Nov 2026 11:31:35 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "중기부, '모두의 창업' 로컬트랙 결선 진출자 100명 선정",
-      "link": "https://www.yna.co.kr/view/AKR20261125086400030",
-      "desc": "(서울=연합뉴스) 구정모 기자 = 중소벤처기업부는 &apos;1차 모두의 창업 프로젝트&apos; 로컬트랙 전국 예선을 열어 파이널 오디션에 진출할 창업가 100...",
-      "pub": "Wed, 25 Nov 2026 11:30:28 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "“제주도 아니고 포천입니다”…감귤 첫 수확 체험에 600명 몰려",
-      "link": "https://www.mk.co.kr/news/society/12217926",
-      "desc": "경기 포천에서 감귤이 열렸다. 제주도의 대표 과일로 익숙한 감귤이 경기 북부 포천에서도 재배되면서 시민과 관광객들의 관심을 끌고 있다. 포천시는 지난 21~22일 청년농업인 김주호..",
-      "pub": "Wed, 25 Nov 2026 11:26:26 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "\"꽂으면 바로 결제\"…현대차그룹 통합 완속충전기 출격",
-      "link": "https://www.hankyung.com/article/202611258795g",
+      "title": "한국투자저축은행 8.6만명 개인정보 유출",
+      "link": "https://www.hankyung.com/article/2026112505211",
       "desc": "",
-      "pub": "Wed, 25 Nov 2026 11:24:36 +0900",
+      "pub": "Wed, 25 Nov 2026 19:47:38 +0900",
       "src": "hankyung",
       "srcName": "한국경제",
       "cls": "hankyung"
     },
     {
-      "title": "'벌 대신 일자리를'…공소청, 발달장애인 생계 범죄에 기소유예",
-      "link": "https://www.yna.co.kr/view/AKR20261125085600055",
-      "desc": "(전주=연합뉴스) 정경재 기자 = 공소청이 발달장애인의 경미한 생계형 범죄에 대해 잇따라 기소유예 처분을 내리고 취업을 지원했다.",
-      "pub": "Wed, 25 Nov 2026 11:24:26 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "파리바게뜨, 21년째 구세군 1호 성금…내년 2월까지 전국 모금",
-      "link": "https://www.yna.co.kr/view/AKR20261125077900030",
-      "desc": "(서울=연합뉴스) 한주홍 기자 = 파리바게뜨는 구세군 자선냄비에 올해 첫 성금을 전달하고 전국 3천400여개 매장에서 모금 활동을 시작한다고 2...",
-      "pub": "Wed, 25 Nov 2026 11:24:15 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "AI쇼크 현실로…“신입 회계사 채용 수요 매년 최대 8.5% 감소”",
-      "link": "https://www.mk.co.kr/news/stock/12217920",
-      "desc": "회계기준원, 빅4 등 5곳 심층 조사 제도적 제약 없으면 3년 후 23% 감소 회계법인 인력구조도 항아리형 전환 금융위, 회계사 선발 3년 연속 감축인공지능(AI) 확산으로 국내 ..",
-      "pub": "Wed, 25 Nov 2026 11:23:04 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "제6회 서울도시건축비엔날레 총감독에 카를로 라티 선정",
-      "link": "https://www.mk.co.kr/news/realestate/12217919",
-      "desc": "서울시는 2027년 개최하는 제6회 서울도시건축비엔날레(서울비엔날레) 총감독으로 이탈리아 출신 건축가이자 도시 연구자인 카를로 라티(Carlo Ratti)를 선정했다고 25일 밝혔..",
-      "pub": "Wed, 25 Nov 2026 11:23:03 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "[게시판] 신용회복위원회, 육군 수도군단 찾아 금융교육",
-      "link": "https://www.yna.co.kr/view/AKR20261125084800002",
-      "desc": "▲ 신용회복위원회는 지난 24일 육군수도군단을 찾아 장병 약 400명을 대상으로 군 장병의 금융역량 강화를 위한 &apos;생생경제 금융교육&apos;을 했다고 ...",
-      "pub": "Wed, 25 Nov 2026 11:22:59 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "아파트 매수 54%가 3040…전용 84㎡ 오피스텔 거래 57% 증가",
-      "link": "https://www.mk.co.kr/news/realestate/12217918",
-      "desc": "올 1-9월 3040 아파트 매수 23만6575건 전용 84㎡ 오피스텔 거래 2773건 화성·오산 등 젊은 도시 오피스텔 분양 중전국 아파트 매수자의 절반 이상을 30·40대가 차..",
-      "pub": "Wed, 25 Nov 2026 11:22:52 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "회원 레슨에 자선대회…골프 마케팅 강화하는 롯데호텔[오형주의 스마트트래블러]",
-      "link": "https://www.hankyung.com/article/202611259107i",
+      "title": "\"여기 짬뽕 순두부 주세요\"…전기차 충전하러 갔다가 '깜짝' [현장+]",
+      "link": "https://www.hankyung.com/article/202611259359H",
       "desc": "",
-      "pub": "Wed, 25 Nov 2026 11:22:11 +0900",
+      "pub": "Wed, 25 Nov 2026 19:30:01 +0900",
       "src": "hankyung",
       "srcName": "한국경제",
       "cls": "hankyung"
     },
     {
-      "title": "코웨이, 화력·사용 편의성 높인 3구 '프라임 인덕션' 출시",
-      "link": "https://www.yna.co.kr/view/AKR20261125081700030",
-      "desc": "(서울=연합뉴스) 구정모 기자 = 코웨이[021240]는 화력과 조작 편의성을 강화한 3구 전기레인지 신제품 &apos;프라임 인덕션&apos;(CIP-30KS)...",
-      "pub": "Wed, 25 Nov 2026 11:20:30 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "은평구 불광역세권 4천92세대 재개발 '시동'…정비구역 지정",
-      "link": "https://www.yna.co.kr/view/AKR20261125084200004",
-      "desc": "(서울=연합뉴스) 정준영 기자 = 서울 은평구(구청장 김미경)는 녹번동 125-1번지 일대 &apos;불광역세권 장기전세주택 도시정비형 재개발사업&apos;의 정...",
-      "pub": "Wed, 25 Nov 2026 11:20:02 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "[게시판] 교보증권, 대한민국 지속가능성보고서상 5년 연속 수상",
-      "link": "https://www.yna.co.kr/view/AKR20261125083700008",
-      "desc": "▲ 교보증권[030610]은 한국표준협회(KSA)가 주관한 &apos;2026 대한민국 지속가능성대회&apos;에서 5년 연속 우수 보고서상(KRCA)을 수상했다...",
-      "pub": "Wed, 25 Nov 2026 11:19:49 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "“뭘 시키고 싶은거야”…횡설수설 상사 의중 파악도 능력이라는 이 조직",
-      "link": "https://www.mk.co.kr/news/economy/12217911",
-      "desc": "금감원 조직문화 직원설문 결과 “상급자 의도 파악 잘해야 인정” 관리자 빌런은 ‘그때그때 달라요’ 후임 빌린은 ‘넵 하고 함흥차사’금융감독원 직원들은 상급자의 의중을 잘 파악하는 ..",
-      "pub": "Wed, 25 Nov 2026 11:18:59 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "[속보] 노소영 “최태원 화해권고 요청에 부동의…진심이면 상고취하 하라”",
-      "link": "https://www.mk.co.kr/news/business/12217910",
-      "desc": "노소영 아트센터나비 관장이 최태원 SK그룹 회장의 화해권고 요청에 동의하지 않는다는 의사를 밝혔다. 25일 노 관장의 법률·소송 대리인은 입장문을 발표하고 “최 회장 측 화해권고 ..",
-      "pub": "Wed, 25 Nov 2026 11:18:36 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "코스피 장중 5%대 급락세 지속…삼전·닉스 8%대 하락",
-      "link": "https://www.yna.co.kr/view/AKR20261125083800008",
-      "desc": "(서울=연합뉴스) 곽윤아 기자 = 코스피가 25일 장중 5%대의 급락세가 이어져 4,700대에서 등락하고 있다.",
-      "pub": "Wed, 25 Nov 2026 11:18:24 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "삼성동 옛 한국감정원 부지에 38층 국제업무시설 들어선다",
-      "link": "https://www.yna.co.kr/view/AKR20261125069500004",
-      "desc": "(서울=연합뉴스) 김동규 기자 = 서울 강남구 삼성동 옛 한국감정원(한국부동산원) 부지가 높이 38층 글로벌 비즈니스 거점으로 재탄생한다.",
-      "pub": "Wed, 25 Nov 2026 11:15:01 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "강남구 삼성동 옛 한국감정원 부지…38층 국제업무 거점시설로 재탄생",
-      "link": "https://www.mk.co.kr/news/realestate/12217879",
-      "desc": "서울 강남구 삼성동 옛 한국감정원 부지가 38층 높이 글로벌 비즈니스 거점으로 재탄생한다. 한강과 탄천을 조망할 수 있는 공중보행로 도시고원(Urban Plateau)과 프라임 오..",
-      "pub": "Wed, 25 Nov 2026 11:15:00 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "“그라운드 밖의 삶도 국가대표처럼”… 대한체육회 선수진로지원센터는 운동선수의 든든한 나침반",
-      "link": "https://www.mk.co.kr/news/business/12217905",
-      "desc": "1:1 맞춤형 진로상담부터 취업 역량 교육까지… 현역•은퇴선수 대상 종합 지원 프로그램 운영수많은 땀방울을 흘리며 경기장을 누비던 스포츠 선수들에게 ‘은퇴’는 피할 수 없는 현실이..",
-      "pub": "Wed, 25 Nov 2026 11:14:12 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "반도체가 바꾼 성장률 계산법…한은, 내년 전망치 대폭 상향하나 [심성미의 중앙은행 워치]",
-      "link": "https://www.hankyung.com/article/202611258895i",
+      "title": "AI發 부채폭탄 공포…코어위브 부도보험료 13%, 소프트뱅크 5% 돌파",
+      "link": "https://www.hankyung.com/article/202611250492i",
       "desc": "",
-      "pub": "Wed, 25 Nov 2026 11:13:24 +0900",
+      "pub": "Wed, 25 Nov 2026 19:21:02 +0900",
       "src": "hankyung",
       "srcName": "한국경제",
       "cls": "hankyung"
     },
     {
-      "title": "횡성군, 내년 예산 7천150억원 편성…관광 500만 시대 본격 추진",
-      "link": "https://www.yna.co.kr/view/AKR20261125082600062",
-      "desc": "(횡성=연합뉴스) 임보연 기자 = 강원 횡성군이 내년도 예산안을 올해보다 5.5% 늘어난 7천150억원 규모로 편성하고 관광객 500만명 유치와...",
-      "pub": "Wed, 25 Nov 2026 11:13:09 +0900",
+      "title": "LH \"5년간 공적주택 50만호 착공\"…李대통령 \"초과 달성하라\"",
+      "link": "https://www.yna.co.kr/view/AKR20261125168600001",
+      "desc": "(서울=연합뉴스) 고동욱 기자 = 이재명 대통령은 25일 서울 은평구의 &apos;공적주택&apos; 현장을 방문해 실제 품질과 여건을 살펴보고, 정책 관련자들과...",
+      "pub": "Wed, 25 Nov 2026 19:11:27 +0900",
       "src": "yna",
       "srcName": "연합뉴스",
       "cls": "yna"
     },
     {
-      "title": "담보대출 밀어내고 신용대출 1위…P2P금융 판이 바뀐다",
-      "link": "https://www.mk.co.kr/news/economy/12217903",
-      "desc": "연계투자 급증에 신용대출 중심 재편 이르면 내달부터 상호금융으로 확대지난달 온라인투자연계금융업(온투업·P2P금융) 대출 가운데 개인신용대출 비중이 2021년 6월 집계 이후 처음으..",
-      "pub": "Wed, 25 Nov 2026 11:13:01 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
+      "title": "한경협 류진 연임 가능성 시사…\"현장 고생하는데 놀 순 없어\"",
+      "link": "https://www.yna.co.kr/view/AKR20261125170600003",
+      "desc": "(서울=연합뉴스) 장하나 기자 = 내년 2월 임기 만료를 앞둔 류진 한국경제인협회 회장이 3연임 가능성을 시사했다.",
+      "pub": "Wed, 25 Nov 2026 19:06:44 +0900",
+      "src": "yna",
+      "srcName": "연합뉴스",
+      "cls": "yna"
     },
     {
-      "title": "[2027 대전망] \"내년 주식에 얼마 투자할까요\"…베스트뱅커 PB의 조언",
-      "link": "https://www.hankyung.com/article/202611232895i",
+      "title": "삼일·안진·한영 회계사 3명 제재…감사 정보 외부 누설",
+      "link": "https://www.yna.co.kr/view/AKR20261125171000002",
+      "desc": "(서울=연합뉴스) 강류나 기자 = 금융위원회 산하 증권선물위원회가 직무상 비밀엄수 의무를 위반한 삼일·안진·한영회계법인 소속 공인회계사들에게 감...",
+      "pub": "Wed, 25 Nov 2026 19:06:15 +0900",
+      "src": "yna",
+      "srcName": "연합뉴스",
+      "cls": "yna"
+    },
+    {
+      "title": "'남자들도 신는다고?'…사흘 만에 80억 잭팟 터진 '장원영 신발' [장서우의 하입:hype]",
+      "link": "https://www.hankyung.com/article/202611250273i",
       "desc": "",
-      "pub": "Wed, 25 Nov 2026 11:12:18 +0900",
+      "pub": "Wed, 25 Nov 2026 19:00:01 +0900",
       "src": "hankyung",
       "srcName": "한국경제",
       "cls": "hankyung"
     },
     {
-      "title": "액트로, 주당 1.0주 무상증자 결정",
-      "link": "https://www.yna.co.kr/view/AKR20261125081500008",
-      "desc": "(서울=연합뉴스) 코스닥 상장사 액트로[290740]는 보통주식 1주당 1.0주를 배정하는 무상증자를 결정했다고 25일 공시했다.",
-      "pub": "Wed, 25 Nov 2026 11:11:59 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "\"월급 주면 다 쓸까봐 보관했다\"…임금체불 등 염전사업장 무더기 적발",
-      "link": "https://www.hankyung.com/article/2026112590817",
+      "title": "[단독] 수천원 내고 200만원?…9배 폭증한 '이 보험' 뭐길래",
+      "link": "https://www.hankyung.com/article/2026112502461",
       "desc": "",
-      "pub": "Wed, 25 Nov 2026 11:11:09 +0900",
+      "pub": "Wed, 25 Nov 2026 18:48:34 +0900",
       "src": "hankyung",
       "srcName": "한국경제",
       "cls": "hankyung"
     },
     {
-      "title": "이억원 “금융권 AX 서두를 것”…AI 해킹 대응체계 강화",
-      "link": "https://www.mk.co.kr/news/economy/12217901",
-      "desc": "이억원 금융위원장이 인공지능(AI)을 악용한 해킹 공격이 늘어나는 데 대해 “보안 역량 강화를 위해서도 금융권 AI 전환(AX)을 더욱 서두르겠다”고 강조했다. 25일 이 위원장은..",
-      "pub": "Wed, 25 Nov 2026 11:09:29 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "의대만 보던 1등급들, 마음 바꿨다?…반도체 계약학과 지원 2배로 쑥",
-      "link": "https://www.mk.co.kr/news/society/12217900",
-      "desc": "자연계열 최상위권 수험생들의 대학 선택에 변화가 나타나고 있다. 의대에 집중됐던 수시 지원이 다소 주춤한 반면 삼성전자와 SK하이닉스 등 반도체 기업 취업과 연계된 계약학과의 인기..",
-      "pub": "Wed, 25 Nov 2026 11:08:17 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "경주 떠나 춘천으로…핀다가 저축은행 본점을 옮긴 까닭",
-      "link": "https://www.mk.co.kr/news/economy/12217899",
-      "desc": "저축銀 인수 후 본점 옮겨 재편 시동 내년 초 AI 앞세운 ‘핀다뱅크’ 출시핀테크 기업 최초로 저축은행을 인수한 핀다가 ‘인공지능(AI) 네이티브 뱅크’ 구축을 위한 새로운 거점으..",
-      "pub": "Wed, 25 Nov 2026 11:08:16 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "광주상의, 연말정산 실무 초급·심화·종합 강좌",
-      "link": "https://www.yna.co.kr/view/AKR20261125078200054",
-      "desc": "(전남광주=연합뉴스) 전승현 기자 = 광주상공회의소는 오는 27일과 12월 2일, 14일 세 차례에 걸쳐 7층 대회의실에서 &apos;2026년 연말정산...",
-      "pub": "Wed, 25 Nov 2026 11:05:06 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "암참, 국가AI전략위 부위원장과 한미 AI 협력 논의",
-      "link": "https://www.yna.co.kr/view/AKR20261125077700003",
-      "desc": "(서울=연합뉴스) 강태우 기자 = 주한미국상공회의소(암참)는 25일 하정우 국가인공지능전략위원회 상근부위원장과 만나 한미 인공지능(AI) 협력 ...",
-      "pub": "Wed, 25 Nov 2026 11:04:45 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "[속보] ‘조희대 탄핵’ 맞서 창원지법서 전체 판사회의 개최…법조계 움직임 본격화",
-      "link": "https://www.mk.co.kr/news/business/12217896",
-      "desc": "[속보] ‘조희대 탄핵’ 맞서 창원지법서 전체 판사회의 개최…법조계 움직임 본격화",
-      "pub": "Wed, 25 Nov 2026 11:04:24 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "“이번이 마지막 금리 인상?”…외국인, 10년물 국채선물 대거 사들였다",
-      "link": "https://www.mk.co.kr/news/economy/12217895",
-      "desc": "10년물 순매수 6월 이후 최대 인상 막바지 장기 금리 하락 베팅외국인이 국채선물 매수를 장기물까지 넓히고 있다. 오는 26일 한국은행(한은) 금융통화위원회(금통위)를 앞두고 이번..",
-      "pub": "Wed, 25 Nov 2026 11:03:32 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "“유족연금 중복지급률 50%로 상향”...국민연금공단은 신중론",
-      "link": "https://www.mk.co.kr/news/business/12217893",
-      "desc": "중복수급권자 4년 새 67.9%↑ 65세 이상 수급자 빈곤율 60% 공단 “미래세대 부담·과잉보장”본인 국민연금 노령연금에 더해 받는 유족연금 비율을 현행 30%에서 50%로 높이..",
-      "pub": "Wed, 25 Nov 2026 11:03:09 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
-    },
-    {
-      "title": "충남도, 도 단위 최초로 공무직 정년 65세로…2030년까지 단계적 연장",
-      "link": "https://www.yna.co.kr/view/AKR20261125040700063",
-      "desc": "(홍성=연합뉴스) 김준범 기자 = 충남도는 공무직 근로자의 정년을 2030년까지 단계적으로 65세로 연장한다고 25일 밝혔다.",
-      "pub": "Wed, 25 Nov 2026 11:00:07 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "보령 웅천 AI 데이터센터 사업부지 매매계약 체결",
-      "link": "https://www.yna.co.kr/view/AKR20261125047100063",
-      "desc": "(보령=연합뉴스) 정윤덕 기자 = 충남 보령시는 충남개발공사와 웅천AI캠퍼스가 25일 웅천일반산업단지 내 인공지능(AI) 데이터센터 사업부지에 ...",
-      "pub": "Wed, 25 Nov 2026 11:00:05 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "\"장원영·수지도 입었네\"…2030 여성들 홀린 '나미리 패딩' [권용훈의 트렌드워치]",
-      "link": "https://www.hankyung.com/article/202611258458i",
+      "title": "등록만 하고 활동 보고는 '깜깜'…창업기획자 42곳 무더기 퇴출",
+      "link": "https://www.hankyung.com/article/202611250462i",
       "desc": "",
-      "pub": "Wed, 25 Nov 2026 11:00:05 +0900",
+      "pub": "Wed, 25 Nov 2026 18:33:12 +0900",
       "src": "hankyung",
       "srcName": "한국경제",
       "cls": "hankyung"
     },
     {
-      "title": "허니버터 팝콘 등 K-스낵, 캐나다 세븐일레븐 진출",
-      "link": "https://www.yna.co.kr/view/AKR20261125065800003",
-      "desc": "(세종=연합뉴스) 신창용 기자 = 한국 세븐일레븐의 대표 인기 스낵인 &apos;허니버터 팝콘&apos; 등이 세븐일레븐 캐나다 법인의 &apos;해외 인기 상품 직수입 ...",
-      "pub": "Wed, 25 Nov 2026 11:00:03 +0900",
+      "title": "미공개중요정보로 1.8억 부당이득…코스닥社 임직원 중수청 통보",
+      "link": "https://www.yna.co.kr/view/AKR20261125167400002",
+      "desc": "(서울=연합뉴스) 강수련 기자 = 금융위원회 산하 증권선물위원회는 25일 21차 정례회의에서 미공개중요정보를 이용해 부당이득을 취한 코스닥 상장...",
+      "pub": "Wed, 25 Nov 2026 18:25:23 +0900",
       "src": "yna",
       "srcName": "연합뉴스",
       "cls": "yna"
     },
     {
-      "title": "중기중앙회, 환경·ESG 위원회 개최…녹색전환 지원 논의",
-      "link": "https://www.yna.co.kr/view/AKR20261125042300030",
-      "desc": "(서울=연합뉴스) 구정모 기자 = 중소기업중앙회는 25일 여의도 중기중앙회에서 &apos;2026년 제2차 환경·ESG 위원회&apos;를 열고 한국형 녹색대전환...",
-      "pub": "Wed, 25 Nov 2026 11:00:02 +0900",
+      "title": "'국내 와인 수입사 첫 상장' 나라셀라, 소주 시장 진출",
+      "link": "https://www.yna.co.kr/view/AKR20261125166800030",
+      "desc": "(서울=연합뉴스) 홍국기 기자 = 국내 와인 수입사 가운데 처음으로 상장한 나라셀라가 소주 시장에 진출한다.",
+      "pub": "Wed, 25 Nov 2026 18:25:02 +0900",
       "src": "yna",
       "srcName": "연합뉴스",
       "cls": "yna"
     },
     {
-      "title": "송미령 농식품장관, IFAD 총재 만나 농업 협력·인력 진출 협의",
-      "link": "https://www.yna.co.kr/view/AKR20261125065500030",
-      "desc": "(서울=연합뉴스) 한주홍 기자 = 송미령 농림축산식품부 장관은 25일 서울에서 알바로 라리오 국제농업개발기금(IFAD) 총재를 만나 농업 협력사...",
-      "pub": "Wed, 25 Nov 2026 11:00:01 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "\"임금 한 번에 안 쓰게 맡아줄게\"…염전사업장 23곳 노동법 위반",
-      "link": "https://www.yna.co.kr/view/AKR20261125065900530",
-      "desc": "(서울=연합뉴스) 한혜원 기자 = 염전에서 일하는 노동자에게 임금을 제때 지급하지 않거나 근로계약서를 작성하지 않는 등 노동관계법을 위반한 염전...",
-      "pub": "Wed, 25 Nov 2026 11:00:00 +0900",
-      "src": "yna",
-      "srcName": "연합뉴스",
-      "cls": "yna"
-    },
-    {
-      "title": "\"급락을 매수 기회로\"...초고수 투자자, 삼전닉스 담았다",
-      "link": "https://www.hankyung.com/article/202611258961i",
+      "title": "한화오션, 태국 해군 호위함 사업 우선협상자 지위 상실 [주목 e공시]",
+      "link": "https://www.hankyung.com/article/2026112504376",
       "desc": "",
-      "pub": "Wed, 25 Nov 2026 10:56:01 +0900",
+      "pub": "Wed, 25 Nov 2026 18:13:34 +0900",
       "src": "hankyung",
       "srcName": "한국경제",
       "cls": "hankyung"
     },
     {
-      "title": "저점 대비 두 배 뛴 코스맥스…증권가 \"더 오른다\"",
-      "link": "https://www.hankyung.com/article/202611259005i",
-      "desc": "",
-      "pub": "Wed, 25 Nov 2026 10:53:53 +0900",
-      "src": "hankyung",
-      "srcName": "한국경제",
-      "cls": "hankyung"
-    },
-    {
-      "title": "[경주소식] 90억 들여 율동지구 대천 정비…수해 예방",
-      "link": "https://www.yna.co.kr/view/AKR20261125075600053",
-      "desc": "(경주=연합뉴스) ▲ 91억 들여 율동지구 대천 정비…수해 예방 = 경북도와 경주시는 내년 1월부터 12월까지 90억8천500만원을 들여 대천 ...",
-      "pub": "Wed, 25 Nov 2026 10:53:25 +0900",
+      "title": "한국투자저축은행 8만6천여명 개인정보 유출…업권 최대 규모",
+      "link": "https://www.yna.co.kr/view/AKR20261125165600002",
+      "desc": "(서울=연합뉴스) 강류나 기자 = 한국투자금융지주 자회사인 한국투자저축은행에서 해킹 사고가 발생해 8만6천433명 고객의 개인정보가 유출됐다.",
+      "pub": "Wed, 25 Nov 2026 18:11:32 +0900",
       "src": "yna",
       "srcName": "연합뉴스",
       "cls": "yna"
     },
     {
-      "title": "한투운용, 전주사무소 개소…\"국민연금과 협력 강화 기대\"",
-      "link": "https://www.hankyung.com/article/2026112590086",
+      "title": "김정관 “중국 R&D에 가장 밀리는 건 시간…주 52시간도 못 풀면 미래 없다”",
+      "link": "https://www.hankyung.com/article/202611250417i",
       "desc": "",
-      "pub": "Wed, 25 Nov 2026 10:52:13 +0900",
+      "pub": "Wed, 25 Nov 2026 18:10:55 +0900",
       "src": "hankyung",
       "srcName": "한국경제",
       "cls": "hankyung"
     },
     {
-      "title": "11월 대구·경북 기업심리지수, 제조업↑·비제조업↓",
-      "link": "https://www.yna.co.kr/view/AKR20261125075200053",
-      "desc": "(대구=연합뉴스) 한무선 기자 = 한국은행 대구경북본부는 11월 중 지역 제조업 기업심리지수(CBSI)가 108.0으로 전월에 비해 1.6포인트...",
-      "pub": "Wed, 25 Nov 2026 10:51:42 +0900",
+      "title": "공론화에 발목잡힌 국가 전력…'하남 변전소' 주민투표로",
+      "link": "https://www.hankyung.com/article/2026112503361",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 18:08:39 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "MZ 부모들이 해냈다…출생아 증가율 '역대 최고'",
+      "link": "https://www.hankyung.com/article/2026112502901",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 18:07:24 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "\"中에 밀리는 건 시간, 주 52시간 특례는 韓 마지막 승부처\"",
+      "link": "https://www.hankyung.com/article/2026112503321",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 18:06:53 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "반도체 고점론 공방 격화에 속절없이 무너진 삼전닉스",
+      "link": "https://www.hankyung.com/article/2026112503021",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 18:06:10 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "안전문화 우수사례 대상에 KT…성심당·제주노사민정협 최우수상",
+      "link": "https://www.yna.co.kr/view/AKR20261125165100530",
+      "desc": "(서울=연합뉴스) 옥성구 기자 = 고용노동부와 한국산업안전보건공단은 25일 서울 마포구 아만티호텔에서 &apos;2026년도 안전문화실천추진단 우수사례 ...",
+      "pub": "Wed, 25 Nov 2026 18:05:33 +0900",
       "src": "yna",
       "srcName": "연합뉴스",
       "cls": "yna"
     },
     {
-      "title": "보안사고에 무너진 소비자 신뢰…SKT는 회복·쿠팡에는 냉랭",
-      "link": "https://www.yna.co.kr/view/AKR20261125068600017",
-      "desc": "(서울=연합뉴스) 박형빈 기자 = 잇따른 해킹·보안 사고로 정보통신서비스 기업들에 대한 소비자 신뢰가 하락한 가운데, 사고 이후 대응에 따라 기...",
-      "pub": "Wed, 25 Nov 2026 10:51:08 +0900",
+      "title": "박홍근 \"'교황 방한' 2027 세계청년대회, 국격 높이도록 지원\"",
+      "link": "https://www.yna.co.kr/view/AKR20261125165000002",
+      "desc": "(세종=연합뉴스) 이세원 기자 = 박홍근 기획예산처 장관은 레오 14세 교황의 방한이 예정된 &apos;2027 서울 세계청년대회&apos;(WYD)를 정부가 적...",
+      "pub": "Wed, 25 Nov 2026 18:04:36 +0900",
       "src": "yna",
       "srcName": "연합뉴스",
       "cls": "yna"
     },
     {
-      "title": "10월 자동차보험 손해율 80.5%…집계 이후 동월 최저",
-      "link": "https://www.yna.co.kr/view/AKR20261125073300002",
-      "desc": "(서울=연합뉴스) 강수련 기자 = 10월 자동차보험 손해율이 작년보다 낮아진 가운데 올해 들어 누적 손해율도 개선 흐름을 이어갔다.",
-      "pub": "Wed, 25 Nov 2026 10:49:55 +0900",
+      "title": "\"3~4일을 계속 울었다\"…주식으로 3억 잃은 한 개미의 조언",
+      "link": "https://www.hankyung.com/article/2026112503737",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 18:02:45 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "[연합뉴스 이 시각 헤드라인] - 18:00",
+      "link": "https://www.yna.co.kr/view/AKR20261125155400011",
+      "desc": "■ 코스피, 6%대 급락 4,697…전날 급등분 모두 반납",
+      "pub": "Wed, 25 Nov 2026 18:00:01 +0900",
       "src": "yna",
       "srcName": "연합뉴스",
       "cls": "yna"
     },
     {
-      "title": "'상폐' 수성웹툰·부산주공, K-OTC 시장서 27일부터 거래",
-      "link": "https://www.yna.co.kr/view/AKR20261125074600008",
-      "desc": "(서울=연합뉴스) 강수지 기자 = 금융투자협회는 25일 수성웹툰과 부산주공을 K-OTC시장 상장폐지지정기업부에 신규 지정했다고 밝혔다.",
-      "pub": "Wed, 25 Nov 2026 10:48:33 +0900",
+      "title": "KT, 안전문화 확산 공로로 고용노동부 장관상 수상",
+      "link": "https://www.yna.co.kr/view/AKR20261125161500017",
+      "desc": "(서울=연합뉴스) 박형빈 기자 = KT[030200]는 25일 서울 마포구 아만티 호텔 서울에서 열린 &apos;2026년 안전문화실천추진단 활동 우수사...",
+      "pub": "Wed, 25 Nov 2026 18:00:00 +0900",
       "src": "yna",
       "srcName": "연합뉴스",
       "cls": "yna"
     },
     {
-      "title": "\"외국인 통장에 15.8조 꽂힌다\"…삼전닉스 특별배당에 '긴장'",
-      "link": "https://www.hankyung.com/article/202611258879i",
+      "title": "[단독] 가상자산 영토 넓히는 금융사…절반은 \"거래소 지분 인수할 것\"",
+      "link": "https://www.hankyung.com/article/2026112503211",
       "desc": "",
-      "pub": "Wed, 25 Nov 2026 10:44:05 +0900",
+      "pub": "Wed, 25 Nov 2026 17:59:40 +0900",
       "src": "hankyung",
       "srcName": "한국경제",
       "cls": "hankyung"
     },
     {
-      "title": "\"한국에 또 '돈벼락' 떨어지나\"…잘나가던 美 빅테크에 무슨 일이",
-      "link": "https://www.hankyung.com/article/202611258882g",
+      "title": "황종우 해수장관, 국가 어업지도선 '무궁화 10호' 취항 축하",
+      "link": "https://www.yna.co.kr/view/AKR20261125164100030",
+      "desc": "(서울=연합뉴스) 한주홍 기자 = 황종우 해양수산부 장관은 25일 전남광주특별시 목포시 서해어업관리단 전용 부두에서 열린 국가 어업지도선 &apos;무궁...",
+      "pub": "Wed, 25 Nov 2026 17:57:48 +0900",
+      "src": "yna",
+      "srcName": "연합뉴스",
+      "cls": "yna"
+    },
+    {
+      "title": "[단독] \"디지털자산 확산 땐 해외송금·외환거래 사업 큰 타격\"",
+      "link": "https://www.hankyung.com/article/2026112503201",
       "desc": "",
-      "pub": "Wed, 25 Nov 2026 10:33:22 +0900",
+      "pub": "Wed, 25 Nov 2026 17:57:09 +0900",
       "src": "hankyung",
       "srcName": "한국경제",
       "cls": "hankyung"
     },
     {
-      "title": "\"산단 혁신 아이디어 받습니다\"…산단공, 국민참여혁신단 모집",
-      "link": "https://www.hankyung.com/article/202611258874i",
+      "title": "[단독] 내년 국회 넘어도 2028년 법 시행",
+      "link": "https://www.hankyung.com/article/2026112503191",
       "desc": "",
-      "pub": "Wed, 25 Nov 2026 10:30:53 +0900",
+      "pub": "Wed, 25 Nov 2026 17:56:58 +0900",
       "src": "hankyung",
       "srcName": "한국경제",
       "cls": "hankyung"
     },
     {
-      "title": "'불륜 스캔들'에도 돌아온 젠슨황 \"행동강령 위반 용납 안 돼\"",
-      "link": "https://www.hankyung.com/article/2026112589107",
+      "title": "외국인 태운 우주선 쏜 中…美와 스페이스 패권전쟁",
+      "link": "https://www.hankyung.com/article/2026112503141",
       "desc": "",
-      "pub": "Wed, 25 Nov 2026 10:27:43 +0900",
+      "pub": "Wed, 25 Nov 2026 17:56:29 +0900",
       "src": "hankyung",
       "srcName": "한국경제",
       "cls": "hankyung"
     },
     {
-      "title": "금리·AI 수익성 우려에 관세까지 … 여의도 족집게 “반등 시그널 이때 나온다”",
-      "link": "https://www.mk.co.kr/news/stock/12217833",
-      "desc": "최재원의 마켓워치미국 증시가 하루 만에 상승세를 반납하고 급락하면서 국내 증시도 충격을 받고 있다. 금리 상승 우려와 인공지능(AI) 투자 수익성 논란, 미국의 추가 관세 가능성까..",
-      "pub": "Wed, 25 Nov 2026 10:20:55 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
+      "title": "'반토막 계좌' 살리는 대응법 [한경 프리미엄9 TODAY]",
+      "link": "https://www.hankyung.com/article/2026112503121",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:55:10 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
     },
     {
-      "title": "7%대 하락한 삼성전자·SK하이닉스 담은 초고수들…셀트리온은 순매도 1위 [주식 초고수는 지금]",
-      "link": "https://www.mk.co.kr/news/stock/12217831",
-      "desc": "주식투자 수익률 상위 1% 초고수들이 25일 장 초반 나란히 7%대 하락한 삼성전자와 SK하이닉스를 가장 많이 사들였다. 순매도 1위는 셀트리온이었다. 미래에셋증권에 따르면 이날 ..",
-      "pub": "Wed, 25 Nov 2026 10:18:24 +09:00",
-      "src": "mk",
-      "srcName": "매일경제",
-      "cls": "mk"
+      "title": "산업장관 \"중국에 밀릴 수도…52시간 특례 내일이라도 시작해야\"",
+      "link": "https://www.yna.co.kr/view/AKR20261125163400003",
+      "desc": "(세종=연합뉴스) 신창용 기자 = 산업통상부 김정관 장관은 중국과의 연구개발(R&amp;amp;D) 경쟁에서 &apos;시간&apos;부터 밀리고 있다며 R&amp;amp;D ...",
+      "pub": "Wed, 25 Nov 2026 17:53:52 +0900",
+      "src": "yna",
+      "srcName": "연합뉴스",
+      "cls": "yna"
+    },
+    {
+      "title": "[단독] 국산 전기차 '배터리 빼고' 반값에 산다",
+      "link": "https://www.hankyung.com/article/2026112503631",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:53:30 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "[단독] \"中 전기차보다 싸네\"…아이오닉5, 이제 반값에 산다",
+      "link": "https://www.hankyung.com/article/2026112502651",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:52:35 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "통화내용 듣고 보이스피싱 직감…은행원이 840만원 피해 막아",
+      "link": "https://www.yna.co.kr/view/AKR20261125152300054",
+      "desc": "(전남광주=연합뉴스) 민현기 기자 = 현금자동입출금기(ATM) 앞에서 통화하던 70대 고객의 통화 내용을 들은 은행원이 전화금융사기(보이스피싱)...",
+      "pub": "Wed, 25 Nov 2026 17:52:08 +0900",
+      "src": "yna",
+      "srcName": "연합뉴스",
+      "cls": "yna"
+    },
+    {
+      "title": "상장 4거래일 만에…앤트로픽, 공모가 붕괴",
+      "link": "https://www.hankyung.com/article/2026112502821",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:51:34 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "IPO 철회 기업들, 잇따라 재도전 검토",
+      "link": "https://www.hankyung.com/article/2026112502801",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:50:13 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "실적개선 종목들 변동장 투자처 부상",
+      "link": "https://www.hankyung.com/article/2026112502811",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:49:25 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "10월 가계대출 금리 연 5% 돌파\n주담대는 14년7개월 만에 최고",
+      "link": "https://www.hankyung.com/article/2026112502471",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:45:34 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "[단독] 코스피 다시 급락하자…정부 '증안펀드' 확대 나섰다",
+      "link": "https://www.hankyung.com/article/2026112503561",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:45:30 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "서울 구금고 지각변동…국민銀, 11곳 맡아 첫 1위로",
+      "link": "https://www.hankyung.com/article/2026112502491",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:44:44 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "에쓰오일, 9조 들인 초대형 석화단지 완공",
+      "link": "https://www.hankyung.com/article/2026112502371",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:43:49 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "생보사 실적 악화에…보험사 올 순익 9000억 줄어",
+      "link": "https://www.hankyung.com/article/2026112502501",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:43:39 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "[포토] 우리은행, 새 연수원 기공",
+      "link": "https://www.hankyung.com/article/2026112502481",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:43:13 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "광화문 오피스 케이트윈타워, 1조원에 이지스운용이 인수",
+      "link": "https://www.yna.co.kr/view/AKR20261125155300003",
+      "desc": "(서울=연합뉴스) 임기창 기자 = 서울 광화문 인근 프라임 오피스인 케이트윈타워(K-Twin Tower)가 1조원에 이지스자산운용에 인수됐다.",
+      "pub": "Wed, 25 Nov 2026 17:43:09 +0900",
+      "src": "yna",
+      "srcName": "연합뉴스",
+      "cls": "yna"
+    },
+    {
+      "title": "GS '오너 4세' 허서홍, 리테일 사장으로 승진",
+      "link": "https://www.hankyung.com/article/2026112502361",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:42:47 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "[포토] 아워홈 인수후 첫 사업장 찾은 김승연",
+      "link": "https://www.hankyung.com/article/2026112502321",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:42:17 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "불붙은 한·일 로봇 경쟁…\"휴머노이드 실전 배치 속도전\"",
+      "link": "https://www.hankyung.com/article/2026112502281",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:41:37 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "류진 한경협 회장, 3연임 도전 시사",
+      "link": "https://www.hankyung.com/article/2026112502331",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:41:09 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "삼성디스플레이, 3000억 투자…'ams오스람' 최대주주 된다",
+      "link": "https://www.hankyung.com/article/2026112502291",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:40:41 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "현대모비스, 유럽·북미서 제동부품 1조 수주",
+      "link": "https://www.hankyung.com/article/2026112502301",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:40:24 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "中企 83%, 정년 연장 대신 '퇴직 후 재고용' 택했다",
+      "link": "https://www.hankyung.com/article/2026112502951",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:37:11 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "'은행의 특수성을 묻는다' 서울대·은행법학회, 27일 학술대회",
+      "link": "https://www.hankyung.com/article/202611250199i",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:36:15 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "국산 전기차 법인세 감면 놓고…당정 막판 조율",
+      "link": "https://www.hankyung.com/article/2026112502631",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:35:22 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "농식품부, K-뷰티·그린바이오 협력 확대…소재 산업화 지원",
+      "link": "https://www.yna.co.kr/view/AKR20261125149000030",
+      "desc": "(서울=연합뉴스) 한주홍 기자 = 농림축산식품부는 25일 전북 남원시바이오산업연구원에서 화장품 산업과 그린바이오 산업 간 협력을 확대하기 위한 ...",
+      "pub": "Wed, 25 Nov 2026 17:30:00 +0900",
+      "src": "yna",
+      "srcName": "연합뉴스",
+      "cls": "yna"
+    },
+    {
+      "title": "전남광주 반도체 건설인력 주거대책 마련…모듈러 주택도 검토",
+      "link": "https://www.yna.co.kr/view/AKR20261125157200054",
+      "desc": "(전남광주=연합뉴스) 박철홍 기자 = 전남광주통합특별시가 반도체 클러스터 조성 과정에서 유입될 대규모 건설인력의 주거 대책을 조만간 마련하기로 ...",
+      "pub": "Wed, 25 Nov 2026 17:22:40 +0900",
+      "src": "yna",
+      "srcName": "연합뉴스",
+      "cls": "yna"
+    },
+    {
+      "title": "[포토] 롤러코스터 코스피",
+      "link": "https://www.hankyung.com/article/202611250164i",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 17:16:39 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "李대통령 \"공적임대주택, 중산층도 선택하는 주거사다리 역할\"",
+      "link": "https://www.yna.co.kr/view/AKR20261125141300001",
+      "desc": "(서울=연합뉴스) 임형섭 기자 = 이재명 대통령은 25일 공적임대주택과 관련해 &quot;위치나 면적, 품질 등의 측면에서 중산층도 얼마든지 선택할 수 ...",
+      "pub": "Wed, 25 Nov 2026 17:08:59 +0900",
+      "src": "yna",
+      "srcName": "연합뉴스",
+      "cls": "yna"
+    },
+    {
+      "title": "'금통위 D-1' 국고채 금리 일제히 하락…3년물 연 3.583%(종합)",
+      "link": "https://www.yna.co.kr/view/AKR20261125149151008",
+      "desc": "(서울=연합뉴스) 고은지 기자 = 한국은행 금융통화위원회의 기준금리 인상 여부를 하루 앞두고 25일 국고채 금리가 일제히 하락했다.",
+      "pub": "Wed, 25 Nov 2026 17:05:48 +0900",
+      "src": "yna",
+      "srcName": "연합뉴스",
+      "cls": "yna"
+    },
+    {
+      "title": "여성기업계 \"AI 활용 위해 중소기업 지원 확대 필요\"",
+      "link": "https://www.yna.co.kr/view/AKR20261125030000003",
+      "desc": "(서울=연합뉴스) 조성흠 기자 = 대한상공회의소는 25일 김성원 국회 산업통상자원중소벤처기업위원회 위원장을 초청해 &apos;제5차 대한상의 여성기업위원...",
+      "pub": "Wed, 25 Nov 2026 17:00:04 +0900",
+      "src": "yna",
+      "srcName": "연합뉴스",
+      "cls": "yna"
+    },
+    {
+      "title": "이형일 \"노사 협력해 기업 여건 맞는 자율 임금체계 도입해야\"",
+      "link": "https://www.yna.co.kr/view/AKR20261125131000002",
+      "desc": "(세종=연합뉴스) 이대희 기자 = 이형일 부총리 겸 재정경제부 장관은 &quot;노사가 협력해 기업 여건에 맞는 합리적이고 자율적인 임금체계 도입을 확산...",
+      "pub": "Wed, 25 Nov 2026 17:00:03 +0900",
+      "src": "yna",
+      "srcName": "연합뉴스",
+      "cls": "yna"
+    },
+    {
+      "title": "거래소, 상장사 사내·사외이사 100여명 대상 밸류업 설명회",
+      "link": "https://www.hankyung.com/article/2026112500936",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 16:56:04 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "엑셀세라퓨틱스 \"中 아크로바이오와 20억원 전략적 투자 유치 협약\"",
+      "link": "https://www.hankyung.com/article/2026112500516",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 16:48:15 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "청주 옛 국정원 부지에 복합문화공간·공공주차장 조성키로",
+      "link": "https://www.yna.co.kr/view/AKR20261125148300064",
+      "desc": "(청주=연합뉴스) 김형우 기자 = 청주시가 옛 국정원 부지를 민간과 함께 개발하려던 계획을 접기로 했다.",
+      "pub": "Wed, 25 Nov 2026 16:46:05 +0900",
+      "src": "yna",
+      "srcName": "연합뉴스",
+      "cls": "yna"
+    },
+    {
+      "title": "라이브엑스 \"탐즈, 롯데홈쇼핑서 '제로 CPR 트리트먼트' 론칭 예정\"",
+      "link": "https://www.hankyung.com/article/2026112500246",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 16:44:28 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "낸드값 하락, D램까지 번질까…격렬해진 '반도체 사이클 공방'",
+      "link": "https://www.hankyung.com/article/202611259913i",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 16:43:52 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "국고채 금리 일제히 하락…3년물 연 3.583%",
+      "link": "https://www.yna.co.kr/view/AKR20261125149100008",
+      "desc": "(서울=연합뉴스) 25일 국고채 금리가 일제히 하락했다.",
+      "pub": "Wed, 25 Nov 2026 16:40:49 +0900",
+      "src": "yna",
+      "srcName": "연합뉴스",
+      "cls": "yna"
+    },
+    {
+      "title": "\"삼전 반값 됐다\" 울상인데…존 리가 콕 집은 '뜻밖의 희소식'",
+      "link": "https://www.hankyung.com/article/2026112599427",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 16:35:49 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "[게시판] 한국신용정보원, 한국에너지공단과 데이터 협력 세미나",
+      "link": "https://www.yna.co.kr/view/AKR20261125144300002",
+      "desc": "▲ 한국신용정보원과 한국에너지공단은 &apos;금융·에너지 데이터 협력&apos;을 주제로 공동세미나를 개최했다고 25일 밝혔다. 세미나는 양 기관이 추진 중인 ...",
+      "pub": "Wed, 25 Nov 2026 16:30:08 +0900",
+      "src": "yna",
+      "srcName": "연합뉴스",
+      "cls": "yna"
+    },
+    {
+      "title": "우리은행, 남양주 다산연수원 기공식…\"지역 상생 공간 조성\"",
+      "link": "https://www.yna.co.kr/view/AKR20261125112600002",
+      "desc": "(서울=연합뉴스) 이도흔 기자 = 우리은행은 경기도 남양주시 다산동에서 &apos;다산연수원 신축 기공식&apos;을 열었다고 25일 밝혔다.",
+      "pub": "Wed, 25 Nov 2026 16:30:00 +0900",
+      "src": "yna",
+      "srcName": "연합뉴스",
+      "cls": "yna"
+    },
+    {
+      "title": "하루 걸러 매수·매도 사이드카…'진짜 반등' 가를 네 가지 신호",
+      "link": "https://www.hankyung.com/article/202611259852i",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 16:26:38 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "송미령 농식품장관 \"국산 콩 소비 확대 필요…콩기름 시장 지원\"(종합)",
+      "link": "https://www.yna.co.kr/view/AKR20261125130751030",
+      "desc": "(서울=연합뉴스) 한주홍 기자 = 송미령 농림축산식품부 장관은 25일 서울 영등포구의 한 카페에서 국산 콩기름 제품을 살펴보고 소비 확대 방안을...",
+      "pub": "Wed, 25 Nov 2026 16:25:55 +0900",
+      "src": "yna",
+      "srcName": "연합뉴스",
+      "cls": "yna"
+    },
+    {
+      "title": "오늘의 프리미엄9 콘텐츠 다이제스트(11월 25일)",
+      "link": "https://www.hankyung.com/article/202611259962i",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 16:24:24 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "반도체주 급락에 인버스 ETF 수익률 상위권 장악…화장품도 강세",
+      "link": "https://www.yna.co.kr/view/AKR20261125143100008",
+      "desc": "(서울=연합뉴스) 강수지 기자 = 반도체주가 큰 폭으로 조정받으면서 최근 일주일간 상장지수펀드(ETF) 수익률 상위권을 인버스 상품이 휩쓸었다....",
+      "pub": "Wed, 25 Nov 2026 16:23:46 +0900",
+      "src": "yna",
+      "srcName": "연합뉴스",
+      "cls": "yna"
+    },
+    {
+      "title": "블프 '잭팟' 해외서 터졌다…폭락장에 10% 급등",
+      "link": "https://www.hankyung.com/article/202611259737i",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 16:20:40 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
+    },
+    {
+      "title": "\"현재 실적보단 미래 수익성\"…데이터센터 청사진으로 엇갈린 통신3사 수익성",
+      "link": "https://www.hankyung.com/article/202611259536i",
+      "desc": "",
+      "pub": "Wed, 25 Nov 2026 16:18:41 +0900",
+      "src": "hankyung",
+      "srcName": "한국경제",
+      "cls": "hankyung"
     }
   ]
 }
