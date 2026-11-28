@@ -1430,7 +1430,7 @@ function renderTOMutual(body){
 }
 
 // ── REGION PAGE ───────────────────────────────────────────
-let regBuilt=false, regSort='den', regTab='region', regSelBank=null;
+let regBuilt=false, regSort='den', regTab='region', regSelBank=null, regBankToMap={};
 
 window.switchRegTab=function(t){
   regTab=t;
@@ -1464,17 +1464,16 @@ function bankShortLabel(nm){
            .replace('BNK','').replace('Sh','').replace('IBK','').replace('SC제일','SC');
 }
 
-function renderRegBank(body){
-  body.innerHTML='';
-  // 패딩 wrapper
+function renderRegBank(rootBody){
+  const regBody=document.getElementById('reg-body');
+  regBody.innerHTML='';
   const wrap=document.createElement('div');
   wrap.style.cssText='padding:12px 16px 24px';
-  body.appendChild(wrap);
-  body=wrap;  // 이후 appendChild는 wrapper에
+  regBody.appendChild(wrap);
 
   // 은행별 전국 지점 집계 (PROV에서 역산)
   const bankTotals={};
-  const bankByProv={};  // bank → prov key → count
+  const bankByProv={};
   Object.entries(PROV).forEach(([pk,pd])=>{
     Object.entries(pd.by_bank||{}).forEach(([bk,cnt])=>{
       bankTotals[bk]=(bankTotals[bk]||0)+cnt;
@@ -1483,58 +1482,99 @@ function renderRegBank(body){
     });
   });
 
-  // 주요 은행 (100지점 이상) 내림차순
   const banks=Object.entries(bankTotals)
-    .filter(([,n])=>n>=50)
-    .sort((a,b)=>b[1]-a[1])
-    .map(([b])=>b);
-
+    .filter(([,n])=>n>=50).sort((a,b)=>b[1]-a[1]).map(([b])=>b);
   if(!regSelBank||!bankTotals[regSelBank]) regSelBank=banks[0];
 
   // 은행 선택 버튼
   const btnWrap=document.createElement('div');
-  btnWrap.style.cssText='padding:0 0 8px;display:flex;flex-wrap:wrap;gap:6px;';
+  btnWrap.style.cssText='padding:0 0 10px;display:flex;flex-wrap:wrap;gap:6px;';
   banks.forEach(bk=>{
     const col=COLORS[bk]||'#888';
     const btn=document.createElement('button');
     btn.className='tbtn';
     btn.style.cssText=`border:1.5px solid ${bk===regSelBank?col:'var(--border)'};color:${bk===regSelBank?col:'var(--t2)'};background:${bk===regSelBank?col+'18':'transparent'};font-size:11.5px;padding:4px 10px;border-radius:12px;cursor:pointer;`;
     btn.textContent=bankShortLabel(bk);
-    btn.addEventListener('click',()=>{regSelBank=bk;renderRegBank(body);});
+    btn.addEventListener('click',()=>{regSelBank=bk;renderRegBank(regBody);});
     btnWrap.appendChild(btn);
   });
-  body.appendChild(btnWrap);
+  wrap.appendChild(btnWrap);
 
-  // 선택 은행 지역별 비중 바차트
   const sel=regSelBank;
   const selCol=COLORS[sel]||'#888';
   const total=bankTotals[sel];
   const provList=Object.entries(bankByProv[sel]||{})
-    .map(([pk,cnt])=>{
-      const pd=PROV[pk];
-      return{pk, name:pd?pd.name:pk, cnt, pct:cnt/total*100};
-    })
+    .map(([pk,cnt])=>{const pd=PROV[pk];return{pk,name:pd?pd.name:pk,cnt,pct:cnt/total*100};})
     .sort((a,b)=>b.cnt-a.cnt);
+  const top3=provList.slice(0,3);
 
+  // 2026 TO 기본값 (TO.now2026 데이터에서 역산)
+  const shortKey=Object.entries(TO_BANK_FULLNAME).find(([,v])=>v===sel)?.[0];
+  const default2026=(shortKey
+    ? TO.now2026.filter(r=>r.bank===shortKey).reduce((s,r)=>s+(r.n||0),0)
+    : 0);
+  if(regBankToMap[sel]===undefined && default2026>0) regBankToMap[sel]=default2026;
+  const userTO=regBankToMap[sel]||0;
+
+  // ── 채용 TO 입력 행 ────────────────────────────────────────
+  const toRow=document.createElement('div');
+  toRow.style.cssText='display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:9px;background:var(--s2);margin-bottom:14px;flex-wrap:wrap;';
+  toRow.innerHTML=`
+    <span style="font-size:12px;font-weight:700;color:var(--t2)">이번 채용 TO</span>
+    <input id="reg-to-inp" type="number" min="0" max="9999" value="${userTO||''}" placeholder="인원 입력"
+      style="width:72px;padding:5px 8px;border-radius:6px;border:1.5px solid var(--border);background:var(--surface);color:var(--text);font-size:14px;font-weight:700;text-align:center;font-family:inherit;outline:none">
+    <span style="font-size:12px;color:var(--t2)">명</span>
+    ${default2026>0?`<span style="font-size:10.5px;color:var(--t3)">· 2026 계획 ${default2026}명 기반</span>`:''}
+    <span id="reg-to-hint" style="font-size:11px;color:${selCol};font-weight:600;margin-left:auto">${userTO>0?`전국 ${userTO}명 기준 지역별 예상`:''}</span>
+  `;
+  wrap.appendChild(toRow);
+
+  // 입력 이벤트: 실시간으로 예상치 업데이트
+  const inp=toRow.querySelector('#reg-to-inp');
+  inp.addEventListener('input',()=>{
+    const v=Math.max(0,parseInt(inp.value)||0);
+    regBankToMap[sel]=v;
+    document.querySelectorAll('.reg-to-est').forEach((el,i)=>{
+      el.textContent=v>0?`약 ${Math.round(provList[i].pct/100*v)}명`:`${provList[i].cnt.toLocaleString()}개`;
+      el.style.color=v>0?selCol:'var(--t3)';
+    });
+    const hint=document.getElementById('reg-to-hint');
+    if(hint) hint.textContent=v>0?`전국 ${v}명 기준 지역별 예상`:'';
+    const tipEl=document.getElementById('reg-to-tip');
+    if(tipEl){
+      if(v>0){
+        tipEl.innerHTML=`<strong>${sel}</strong> — 총 <strong>${v}명</strong> 채용 시: <strong>${top3.map(r=>`${r.name} 약 ${Math.round(r.pct/100*v)}명`).join(' · ')}</strong>`;
+      } else {
+        tipEl.innerHTML=`<strong>${sel}</strong> 지점의 <strong>${top3.map(r=>`${r.name} ${r.pct.toFixed(0)}%`).join(' · ')}</strong> 집중 (상위 3개 지역 합계 ${top3.reduce((s,r)=>s+r.pct,0).toFixed(0)}%)`;
+      }
+    }
+  });
+  inp.addEventListener('focus',()=>{inp.style.borderColor=selCol;});
+  inp.addEventListener('blur',()=>{inp.style.borderColor='var(--border)';});
+
+  // ── 바 차트 ────────────────────────────────────────────────
   const sec=document.createElement('div');sec.className='ana-sec';
   sec.innerHTML=`<div class="sec-ttl">${sel} — 전국 ${total.toLocaleString()}개 지점의 지역별 분포</div>`;
-
-  provList.forEach(r=>{
+  provList.forEach((r,i)=>{
+    const estText=userTO>0?`약 ${Math.round(r.pct/100*userTO)}명`:`${r.cnt.toLocaleString()}개`;
     const row=document.createElement('div');row.className='rbar-row';
     row.innerHTML=`
       <span class="rbar-name" style="width:80px;min-width:80px;font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${r.name}</span>
       <div class="rbar-track"><div class="rbar-fill" style="width:${r.pct.toFixed(1)}%;background:${selCol}"></div></div>
       <span class="rbar-val" style="color:${selCol};min-width:40px;text-align:right">${r.pct.toFixed(1)}%</span>
-      <span class="rbar-sub" style="font-size:10px;color:var(--t3);min-width:36px;white-space:nowrap">${r.cnt.toLocaleString()}개</span>`;
+      <span class="reg-to-est rbar-sub" style="font-size:10.5px;min-width:48px;white-space:nowrap;font-weight:${userTO>0?'600':'400'};color:${userTO>0?selCol:'var(--t3)'}">${estText}</span>`;
     sec.appendChild(row);
   });
-  body.appendChild(sec);
+  wrap.appendChild(sec);
 
-  // 상위 3개 지역 요약 팁
-  const top3=provList.slice(0,3);
-  const tip=document.createElement('div');tip.className='gg-tip';tip.style.marginTop='8px';
-  tip.innerHTML=`<strong>${sel}</strong> 지점의 <strong>${top3.map(r=>`${r.name} ${r.pct.toFixed(0)}%`).join(' · ')}</strong> 집중 (상위 3개 지역 합계 ${top3.reduce((s,r)=>s+r.pct,0).toFixed(0)}%)`;
-  body.appendChild(tip);
+  // ── 요약 팁 ────────────────────────────────────────────────
+  const tip=document.createElement('div');tip.className='gg-tip';tip.id='reg-to-tip';tip.style.marginTop='8px';
+  if(userTO>0){
+    tip.innerHTML=`<strong>${sel}</strong> — 총 <strong>${userTO}명</strong> 채용 시: <strong>${top3.map(r=>`${r.name} 약 ${Math.round(r.pct/100*userTO)}명`).join(' · ')}</strong>`;
+  } else {
+    tip.innerHTML=`<strong>${sel}</strong> 지점의 <strong>${top3.map(r=>`${r.name} ${r.pct.toFixed(0)}%`).join(' · ')}</strong> 집중 (상위 3개 지역 합계 ${top3.reduce((s,r)=>s+r.pct,0).toFixed(0)}%)`;
+  }
+  wrap.appendChild(tip);
 }
 
 function renderReg(){
